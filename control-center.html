@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="h-full bg-[#FAF8F5]">
 <head>
   <meta charset="UTF-8">
@@ -953,8 +953,38 @@
             <div class="pt-2 text-[11px] text-brand-textMuted">
               💡 <em>Protocolo oficial: Para facturar a tiendas B2B en el portal SUNAT SOL, ingresa con tu Clave SOL, elige <strong>SEE-SOL Factura</strong> y digita los montos de la calculadora.</em>
             </div>
+        </div>
+
+        <!-- Historial de Ventas Registradas -->
+        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border shadow-card space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h4 class="font-display font-bold text-base text-brand-textMain">📋 Historial de Ventas Registradas</h4>
+              <p class="text-xs text-brand-textMuted">Registro de transacciones comerciales y comprobantes emitidos</p>
+            </div>
+            <span class="text-xs font-bold text-brand-campo bg-brand-nature/30 px-3 py-1 rounded-full" id="ventas-count-badge">0 ventas registradas</span>
           </div>
 
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead>
+                <tr class="border-b border-brand-borderLight text-brand-textMuted font-bold text-[11px] uppercase">
+                  <th class="pb-2.5">ID</th>
+                  <th class="pb-2.5">Fecha / Hora</th>
+                  <th class="pb-2.5">Cliente</th>
+                  <th class="pb-2.5">Canal</th>
+                  <th class="pb-2.5">Detalle Productos</th>
+                  <th class="pb-2.5 text-right">Subtotal</th>
+                  <th class="pb-2.5 text-right">IGV (18%)</th>
+                  <th class="pb-2.5 text-right">Total</th>
+                  <th class="pb-2.5 text-center">Estado</th>
+                </tr>
+              </thead>
+              <tbody id="ventas-table-body" class="divide-y divide-brand-borderLight">
+                <!-- Se llena dinámicamente -->
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -2237,10 +2267,17 @@
                         "potencial":  "medio",
                         "notas":  "C. Colón 112, Miraflores. Counter 20g"
                     }
-                ]
-};
+                ],
+      "inventory": {
+        "inv-20g": { "id": "inv-20g", "nombre": "Grajeas 20g (Retail)", "cantidad": 120, "unidad": "unids", "precio_unitario": 4.80 },
+        "inv-100g": { "id": "inv-100g", "nombre": "Caja Gourmet 100g", "cantidad": 45, "unidad": "cajas", "precio_unitario": 17.50 },
+        "inv-polos": { "id": "inv-polos", "nombre": "Polos Camiseros", "cantidad": 24, "unidad": "polos", "precio_unitario": 0.00 },
+        "inv-llaveros": { "id": "inv-llaveros", "nombre": "Llaveros Xiembra", "cantidad": 50, "unidad": "unids", "precio_unitario": 0.00 }
+      },
+      "sales": []
+    };
     // State management
-    let appData = { tasks: [], clients: [] };
+    let appData = { tasks: [], clients: [], inventory: {}, sales: [] };
     let activeUser = 'Karla'; // Default: Karla
     let activeView = 'inicio';
     let taskFilterUser = 'karla'; // 'karla' | 'roger' | 'todos'
@@ -2262,6 +2299,12 @@
       if (saved) {
         try {
           appData = JSON.parse(saved);
+          if (!appData.inventory) {
+            appData.inventory = JSON.parse(JSON.stringify(INITIAL_DATA.inventory));
+          }
+          if (!appData.sales) {
+            appData.sales = JSON.parse(JSON.stringify(INITIAL_DATA.sales));
+          }
         } catch (e) {
           appData = JSON.parse(JSON.stringify(INITIAL_DATA));
         }
@@ -2401,6 +2444,7 @@
       renderClients();
       renderPipeline();
       renderInventory();
+      renderVentas();
     }
 
     // ========================================================
@@ -2441,6 +2485,11 @@
       document.getElementById('stat-prospectos-total').textContent = appData.clients.length;
       const contactados = appData.clients.filter(c => c.etapa !== 'prospeccion').length;
       document.getElementById('stat-prospectos-contactados').textContent = `${contactados} en contacto`;
+
+      // Sales KPI in Inicio
+      const totalVentas = (appData.sales || []).reduce((acc, v) => acc + (v.total || 0), 0);
+      const statVentasEl = document.getElementById('stat-ventas-monto');
+      if (statVentasEl) statVentasEl.textContent = `S/ ${totalVentas.toFixed(2)}`;
 
       // 2. Render HOY Section
       let todayList = appData.tasks.filter(t => t.estado !== 'terminado');
@@ -2909,28 +2958,33 @@
     // INVENTARIO & VENTAS HELPERS
     // ========================================================
     function renderInventory() {
-      // reads values from UI or localStorage
+      if (!appData.inventory) return;
+      for (const [id, item] of Object.entries(appData.inventory)) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.innerHTML = `${item.cantidad} <span class="text-sm font-normal text-brand-textMuted">${item.unidad}</span>`;
+        }
+      }
     }
 
     function adjustInventory(elementId, delta) {
-      const el = document.getElementById(elementId);
-      if (el) {
-        let current = parseInt(el.textContent) || 0;
-        current = Math.max(0, current + delta);
-        el.innerHTML = `${current} <span class="text-sm font-normal text-brand-textMuted">unids</span>`;
-        showToast(`Stock actualizado: ${current}`);
-      }
+      if (!appData.inventory || !appData.inventory[elementId]) return;
+      appData.inventory[elementId].cantidad = Math.max(0, appData.inventory[elementId].cantidad + delta);
+      persistData();
+      renderInventory();
+      showToast(`Stock de ${appData.inventory[elementId].nombre}: ${appData.inventory[elementId].cantidad} ${appData.inventory[elementId].unidad}`);
     }
 
     function confirmInventoryUpdate() {
       const item = document.getElementById('modal-inv-item').value;
       const cant = parseInt(document.getElementById('modal-inv-cant').value) || 0;
-      const target = document.getElementById(item);
-      if (target) {
-        target.innerHTML = `${cant} <span class="text-sm font-normal text-brand-textMuted">unids</span>`;
+      if (appData.inventory && appData.inventory[item]) {
+        appData.inventory[item].cantidad = Math.max(0, cant);
+        persistData();
+        renderInventory();
+        showToast(`Inventario actualizado: ${appData.inventory[item].nombre} = ${appData.inventory[item].cantidad}`);
       }
       closeModal('modal-actualizar-inventario');
-      showToast('Inventario actualizado con éxito');
     }
 
     function calculateVenta() {
@@ -2975,22 +3029,144 @@ Adjuntamos Factura Electrónica. Favor de enviarnos el voucher para despachar su
       });
     }
 
+    function renderVentas() {
+      const sales = appData.sales || [];
+      const totalMonto = sales.reduce((acc, v) => acc + (v.total || 0), 0);
+      const totalEl = document.getElementById('stat-ventas-monto');
+      if (totalEl) {
+        totalEl.textContent = `S/ ${totalMonto.toFixed(2)}`;
+      }
+
+      const countBadge = document.getElementById('ventas-count-badge');
+      if (countBadge) {
+        countBadge.textContent = `${sales.length} ${sales.length === 1 ? 'venta registrada' : 'ventas registradas'}`;
+      }
+
+      const tbody = document.getElementById('ventas-table-body');
+      if (!tbody) return;
+
+      tbody.innerHTML = '';
+      if (sales.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="9" class="py-8 text-center text-xs text-brand-textMuted">
+              <i data-lucide="receipt" class="w-6 h-6 mx-auto mb-2 opacity-40"></i>
+              Sin ventas registradas aún. Utiliza la calculadora superior o el botón "+ Registrar Venta" para emitir la primera orden piloto.
+            </td>
+          </tr>
+        `;
+      } else {
+        sales.forEach(v => {
+          const tr = document.createElement('tr');
+          tr.className = "hover:bg-brand-arena/30 transition";
+          tr.innerHTML = `
+            <td class="py-3 font-bold text-brand-campoDark font-mono text-[11px]">${v.id}</td>
+            <td class="py-3 text-brand-textMuted">${v.fecha_hora}</td>
+            <td class="py-3 font-bold text-brand-textMain">${v.cliente}</td>
+            <td class="py-3"><span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">${v.canal}</span></td>
+            <td class="py-3 font-medium text-brand-textMain">${v.producto}</td>
+            <td class="py-3 text-right font-semibold text-brand-textMuted">S/ ${Number(v.subtotal).toFixed(2)}</td>
+            <td class="py-3 text-right font-semibold text-brand-textMuted">S/ ${Number(v.igv).toFixed(2)}</td>
+            <td class="py-3 text-right font-bold text-brand-campo">S/ ${Number(v.total).toFixed(2)}</td>
+            <td class="py-3 text-center"><span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 uppercase">${v.estado}</span></td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+      lucide.createIcons();
+    }
+
     function confirmRegisterVenta() {
       const cliente = document.getElementById('venta-cliente').value;
-      const total = document.getElementById('calc-total').textContent;
-      document.getElementById('stat-ventas-monto').textContent = total;
-      showToast(`¡Venta registrada para ${cliente}! Total: ${total}`);
+      const c20 = parseInt(document.getElementById('venta-cant-20g').value) || 0;
+      const c100 = parseInt(document.getElementById('venta-cant-100g').value) || 0;
+
+      if (c20 === 0 && c100 === 0) {
+        showToast('Ingresa al menos 1 unidad de producto');
+        return;
+      }
+
+      const tot20 = c20 * 4.80;
+      const tot100 = c100 * 17.50;
+      const total = tot20 + tot100;
+      const base = total / 1.18;
+      const igv = total - base;
+
+      const itemsDesc = [];
+      if (c20 > 0) itemsDesc.push(`${c20} unids 20g`);
+      if (c100 > 0) itemsDesc.push(`${c100} cajas 100g`);
+
+      const now = new Date();
+      const fechaHora = now.toISOString().slice(0, 10) + ' ' + now.toTimeString().slice(0, 5);
+      const count = (appData.sales ? appData.sales.length : 0) + 1;
+      const id = `VTA-${String(count).padStart(3, '0')}`;
+
+      const nuevaVenta = {
+        id: id,
+        fecha_hora: fechaHora,
+        producto: itemsDesc.join(' + '),
+        cantidad: c20 + c100,
+        precio_unitario: "S/ 4.80 (20g) / S/ 17.50 (100g)",
+        subtotal: parseFloat(base.toFixed(2)),
+        igv: parseFloat(igv.toFixed(2)),
+        total: parseFloat(total.toFixed(2)),
+        cliente: cliente,
+        canal: "B2B Retail",
+        estado: "completado"
+      };
+
+      if (!appData.sales) appData.sales = [];
+      appData.sales.unshift(nuevaVenta);
+      persistData();
+      renderVentas();
+      showToast(`¡Venta ${id} registrada para ${cliente}! Total: S/ ${total.toFixed(2)}`);
     }
 
     function confirmModalVenta() {
       const cliente = document.getElementById('modal-venta-cliente').value;
       const c20 = parseInt(document.getElementById('modal-venta-cant-20g').value) || 0;
       const c100 = parseInt(document.getElementById('modal-venta-cant-100g').value) || 0;
-      const total = (c20 * 4.80) + (c100 * 17.50);
 
-      document.getElementById('stat-ventas-monto').textContent = `S/ ${total.toFixed(2)}`;
+      if (c20 === 0 && c100 === 0) {
+        showToast('Ingresa al menos 1 unidad de producto');
+        return;
+      }
+
+      const tot20 = c20 * 4.80;
+      const tot100 = c100 * 17.50;
+      const total = tot20 + tot100;
+      const base = total / 1.18;
+      const igv = total - base;
+
+      const itemsDesc = [];
+      if (c20 > 0) itemsDesc.push(`${c20} unids 20g`);
+      if (c100 > 0) itemsDesc.push(`${c100} cajas 100g`);
+
+      const now = new Date();
+      const fechaHora = now.toISOString().slice(0, 10) + ' ' + now.toTimeString().slice(0, 5);
+      const count = (appData.sales ? appData.sales.length : 0) + 1;
+      const id = `VTA-${String(count).padStart(3, '0')}`;
+
+      const nuevaVenta = {
+        id: id,
+        fecha_hora: fechaHora,
+        producto: itemsDesc.join(' + '),
+        cantidad: c20 + c100,
+        precio_unitario: "S/ 4.80 (20g) / S/ 17.50 (100g)",
+        subtotal: parseFloat(base.toFixed(2)),
+        igv: parseFloat(igv.toFixed(2)),
+        total: parseFloat(total.toFixed(2)),
+        cliente: cliente,
+        canal: cliente === "Venta Directa" ? "Directo / Feria" : "B2B Retail",
+        estado: "completado"
+      };
+
+      if (!appData.sales) appData.sales = [];
+      appData.sales.unshift(nuevaVenta);
+      persistData();
+      renderVentas();
       closeModal('modal-registrar-venta');
-      showToast(`Venta de S/ ${total.toFixed(2)} registrada para ${cliente}`);
+      showToast(`Venta ${id} de S/ ${total.toFixed(2)} registrada para ${cliente}`);
     }
 
     function confirmSeguimiento() {
