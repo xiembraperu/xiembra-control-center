@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+package-lock.json
+package.json
+
+# Builds y artefactos empaquetados
+dist/
+
+# Scripts y plantillas locales temporales
+*.ps1
+template_clean.html
+
+# Documentos de trabajo e informes internos
+AUDITORIA_*.md
+catalogo_de_activos.*
+contexto.md
+design.md
+
+# Archivos del sistema y logs
+.DS_Store
+Thumbs.db
+*.log
