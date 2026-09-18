@@ -1,0 +1,407 @@
+﻿[
+    {
+        "formato":  "PNG (Transparente)",
+        "id":  "logo_compacto_verde_campo",
+        "tags":  [
+                     "logo",
+                     "compacto",
+                     "verde campo",
+                     "transparente",
+                     "cabecera",
+                     "oficial"
+                 ],
+        "uso_recomendado":  "Cabeceras web claras, papeleria, facturas, empaques claros y fondos blancos.",
+        "categoria":  "Logotipos Oficiales",
+        "ruta":  "images/xiembra_logo_compacto_verde_campo.png",
+        "descripcion":  "Logotipo oficial de XIEMBRA en composicion compacta apilada (\u0027Xiem / bra\u0027) con isotipo de brote, en Verde Campo (#006148) sobre fondo 100% transparente. 2,250 px.",
+        "dimensiones":  "1637 x 756 px",
+        "subcategoria":  "PNG Transparente",
+        "consultas_agente":  [
+                                 "Logo oficial de Xiembra para fondo blanco",
+                                 "logo transparente verde oscuro",
+                                 "logo compacto cabecera"
+                             ]
+    },
+    {
+        "formato":  "PNG (Transparente)",
+        "id":  "logo_compacto_verde_nature",
+        "tags":  [
+                     "logo",
+                     "compacto",
+                     "verde nature",
+                     "transparente",
+                     "footer",
+                     "dark mode"
+                 ],
+        "uso_recomendado":  "Uso exclusivo sobre fondos oscuros: pie de pagina web (footer), banners dark mode y empaques oscuros.",
+        "categoria":  "Logotipos Oficiales",
+        "ruta":  "images/xiembra_logo_compacto_verde_nature.png",
+        "descripcion":  "Logotipo oficial en composicion compacta apilada en Verde Nature (#CBEC8A) de alto contraste sobre fondo 100% transparente. 2,250 px.",
+        "dimensiones":  "1637 x 756 px",
+        "subcategoria":  "PNG Transparente",
+        "consultas_agente":  [
+                                 "Logo de Xiembra para fondo oscuro",
+                                 "logo verde claro transparente",
+                                 "logo para footer"
+                             ]
+    },
+    {
+        "formato":  "Adobe Illustrator (.ai)",
+        "id":  "logo_vectorial_master",
+        "tags":  [
+                     "vector",
+                     "ai",
+                     "illustrator",
+                     "editable",
+                     "master",
+                     "curvas"
+                 ],
+        "uso_recomendado":  "Diseno de imprenta, gigantografias, empaques industriales y modificaciones oficiales de identidad.",
+        "categoria":  "Logotipos Oficiales",
+        "ruta":  "1. Identidad de Marca y Diseno/1. Logos Oficiales/Vectorial (Editable)/XIEMBRA_Logo_Oficial_Vectorial.ai",
+        "descripcion":  "Archivo matriz editable de Adobe Illustrator con todas las variantes del logotipo en vectores puros (curvas sin rasterizar).",
+        "dimensiones":  "Escalable Vectorial",
+        "subcategoria":  "Vectorial Editable",
+        "consultas_agente":  [
+                                 "Archivo editable de illustrator del logo",
+                                 "vector original del logo",
+                                 "logo ai"
+                             ]
+    },
+    {
+        "formato":  "PDF Vectorial",
+        "id":  "logo_manual_visual_pdf",
+        "tags":  [
+                     "pdf",
+                     "manual",
+                     "normativa",
+                     "guia visual",
+                     "vector"
+                 ],
+        "uso_recomendado":  "Consulta de normativa de marca, distribucion a agencias de publicidad y diseno.",
+        "categoria":  "Logotipos Oficiales",
+        "ruta":  "1. Identidad de Marca y Diseno/1. Logos Oficiales/Vectorial (Editable)/XIEMBRA_Logo_Oficial_Manual_Visual.pdf",
+        "descripcion":  "Manual visual y guia de uso de los logotipos oficiales en formato PDF con 8 paginas de variantes cromaticas (Verde Campo, Verde Nature, Amarillo Limon, Crema Rancho).",
+        "dimensiones":  "Documento PDF multipagina",
+        "subcategoria":  "Manual de Identidad",
+        "consultas_agente":  [
+                                 "Manual visual del logo",
+                                 "pdf del logo",
+                                 "guia de colores del logo"
+                             ]
+    },
+    {
+        "formato":  "PNG (Transparente)",
+        "id":  "pacarana_mascota_transparente",
+        "tags":  [
+                     "pacarana",
+                     "mascota",
+                     "personaje",
+                     "machetero",
+                     "transparente",
+                     "recorte limpio"
+                 ],
+        "uso_recomendado":  "Stickers, integracion en banners publicitarios, empaques, animaciones web e interfaces.",
+        "categoria":  "Mascota Oficial",
+        "ruta":  "images/xiembra_mascota_pacarana_transparente.png",
+        "descripcion":  "Ilustracion oficial de La Pacarana (Dinomys branickii) con sombrero campesino de paja, pala de cultivo y taza de cafe humeante. Recorte profesional 100% transparente sin ningun artefacto.",
+        "dimensiones":  "1071 x 1351 px",
+        "subcategoria":  "PNG Transparente",
+        "consultas_agente":  [
+                                 "Imagen de la pacarana sin fondo",
+                                 "mascota oficial transparente",
+                                 "pacarana png"
+                             ]
+    },
+    {
+        "formato":  "Adobe Illustrator (.ai)",
+        "id":  "pacarana_vectorial_master",
+        "tags":  [
+                     "vector",
+                     "pacarana",
+                     "ai",
+                     "illustrator",
+                     "editable",
+                     "personaje"
+                 ],
+        "uso_recomendado":  "Diseno de merchandising, animacion, nuevas poses o adaptacion de empaque.",
+        "categoria":  "Mascota Oficial",
+        "ruta":  "1. Identidad de Marca y Diseno/2. Mascota La Pacarana/Vectorial (Editable)/XIEMBRA_Pacarana_Personaje_Editable.ai",
+        "descripcion":  "Ilustracion vectorial completa y editable del personaje La Pacarana en capas organizadas.",
+        "dimensiones":  "Escalable Vectorial",
+        "subcategoria":  "Vectorial Editable",
+        "consultas_agente":  [
+                                 "Vector editable de la pacarana",
+                                 "pacarana ai",
+                                 "personaje en illustrator"
+                             ]
+    },
+    {
+        "formato":  "JPEG (2.2K)",
+        "id":  "pacarana_render_crema_oficial",
+        "tags":  [
+                     "pacarana",
+                     "crema",
+                     "render",
+                     "cuadrado",
+                     "alta resolucion",
+                     "post"
+                 ],
+        "uso_recomendado":  "Publicaciones en redes sociales, ficha de producto gourmet 100g, folletos y tarjetas de presentacion.",
+        "categoria":  "Mascota Oficial",
+        "ruta":  "1. Identidad de Marca y Diseno/2. Mascota La Pacarana/Renders Oficiales JPG/Pacarana_01_Fondo_Crema_Oficial.jpg",
+        "descripcion":  "Tarjeta cuadrada oficial en alta resolucion con La Pacarana sobre fondo Crema Rancho (#FFFCD2).",
+        "dimensiones":  "2250 x 2250 px",
+        "subcategoria":  "Renders Oficiales JPG",
+        "consultas_agente":  [
+                                 "Foto oficial de la pacarana en fondo crema",
+                                 "tarjeta cuadrada de la pacarana"
+                             ]
+    },
+    {
+        "formato":  "JPEG",
+        "id":  "avatar_redes_verde_campo",
+        "tags":  [
+                     "avatar",
+                     "perfil",
+                     "redes",
+                     "whatsapp",
+                     "instagram",
+                     "verde campo",
+                     "1080x1080"
+                 ],
+        "uso_recomendado":  "Foto de perfil oficial en WhatsApp Business (+51 981 011 816), Instagram, Facebook y LinkedIn.",
+        "categoria":  "Redes Sociales \u0026 Perfil",
+        "ruta":  "1. Identidad de Marca y Diseno/4. Fotos de Perfil y Redes/XIEMBRA_Avatar_Redes_Verde_Campo_1080x1080.jpg",
+        "descripcion":  "Avatar cuadrado optimizado de 1080 x 1080 px con el isotipo de brote sobre fondo Verde Campo (#006148).",
+        "dimensiones":  "1080 x 1080 px",
+        "subcategoria":  "Avatar Oficial",
+        "consultas_agente":  [
+                                 "Foto de perfil para whatsapp",
+                                 "avatar de redes verde oscuro",
+                                 "icono de perfil xiembra"
+                             ]
+    },
+    {
+        "formato":  "JPEG Optimizado",
+        "id":  "web_portada_hero_panoramica",
+        "tags":  [
+                     "hero",
+                     "portada",
+                     "fondo de pantalla",
+                     "caja 100g",
+                     "selva",
+                     "panoramica",
+                     "web"
+                 ],
+        "uso_recomendado":  "Fondo de portada del sitio web (Hero Section #tab-inicio).",
+        "categoria":  "Activos Web (images/)",
+        "ruta":  "images/xiembra_portada_hero_panoramica.jpeg",
+        "descripcion":  "Fotografia panoramica cinematografica con la caja gourmet de 100g de XIEMBRA iluminada en el cuadrante derecho sobre un entorno botanico de selva de altura. Disenada para fondo completo con legibilidad izquierda.",
+        "dimensiones":  "1536 x 1024 px",
+        "subcategoria":  "Portada \u0026 Hero",
+        "consultas_agente":  [
+                                 "Fondo de la portada web",
+                                 "foto panoramica de la caja",
+                                 "imagen hero principal"
+                             ]
+    },
+    {
+        "formato":  "JPEG Optimizado",
+        "id":  "web_producto_caja_100g_pacarana",
+        "tags":  [
+                     "caja 100g",
+                     "producto",
+                     "pacarana",
+                     "mockup",
+                     "catalogo",
+                     "chocograjeas",
+                     "gourmet"
+                 ],
+        "uso_recomendado":  "Ficha de producto en e-commerce y catalogo de pedidos minoristas.",
+        "categoria":  "Activos Web (images/)",
+        "ruta":  "images/xiembra_producto_caja_100g_pacarana.jpg",
+        "descripcion":  "Fotografia de producto de la Caja Gourmet de 100g de Chocograjeas de Cafe con la ilustracion oficial de La Pacarana, fondo neutro de alta gama y acabado mate. PVP sugerido S/ 24.00.",
+        "dimensiones":  "1000 x 1000 px",
+        "subcategoria":  "Catalogo de Productos",
+        "consultas_agente":  [
+                                 "Foto de la caja de 100g",
+                                 "mockup de la caja gourmet",
+                                 "producto principal xiembra"
+                             ]
+    },
+    {
+        "formato":  "JPEG Optimizado",
+        "id":  "web_producto_bolsita_20g",
+        "tags":  [
+                     "bolsita 20g",
+                     "producto",
+                     "on-the-go",
+                     "impulso",
+                     "trilaminada",
+                     "snack"
+                 ],
+        "uso_recomendado":  "Ficha de producto impulso en catalogo web.",
+        "categoria":  "Activos Web (images/)",
+        "ruta":  "images/xiembra_producto_bolsita_20g.jpg",
+        "descripcion":  "Fotografia de producto de la Bolsita Individual On-The-Go de 20g (6x12 cm) en bolsa trilaminada con cierre T. PVP sugerido S/ 6.90.",
+        "dimensiones":  "515 x 1000 px",
+        "subcategoria":  "Catalogo de Productos",
+        "consultas_agente":  [
+                                 "Foto de la bolsita de 20g",
+                                 "empaque de 20 gramos",
+                                 "producto impulso"
+                             ]
+    },
+    {
+        "formato":  "JPEG Optimizado",
+        "id":  "web_producto_cafe_especialidad_100g",
+        "tags":  [
+                     "cafe",
+                     "especialidad",
+                     "sanchirio palomar",
+                     "grano tostado",
+                     "caja cafe",
+                     "catalogo"
+                 ],
+        "uso_recomendado":  "Ficha de producto de cafe puro de origen en catalogo web.",
+        "categoria":  "Activos Web (images/)",
+        "ruta":  "images/xiembra_producto_cafe_especialidad_100g.jpg",
+        "descripcion":  "Fotografia de producto de la Caja de Cafe de Especialidad en grano tostado de 100g cosechado en el Parque Nacional del Cafe en Sanchirio Palomar. PVP sugerido S/ 28.00.",
+        "dimensiones":  "1672 x 941 px",
+        "subcategoria":  "Catalogo de Productos",
+        "consultas_agente":  [
+                                 "Foto del cafe de especialidad",
+                                 "caja de cafe xiembra",
+                                 "producto cafe 100g"
+                             ]
+    },
+    {
+        "formato":  "PDF (26.7 MB)",
+        "id":  "doc_presentacion_oficial_pitch",
+        "tags":  [
+                     "pitch deck",
+                     "presentacion oficial",
+                     "inversion",
+                     "negocio",
+                     "pdf"
+                 ],
+        "uso_recomendado":  "Reuniones con inversionistas y rondas de financiamiento.",
+        "categoria":  "Documentos Corporativos",
+        "ruta":  "2. Documentos Corporativos/1. Presentaciones de Negocio/Presentacion Oficial Xiembra.pdf",
+        "descripcion":  "Presentacion corporativa oficial y Pitch Deck maestro de XIEMBRA. Contiene propuesta de valor, mercado, validacion y proyecciones.",
+        "dimensiones":  "Documento PDF Multipagina",
+        "subcategoria":  "Presentaciones de Negocio",
+        "consultas_agente":  [
+                                 "Presentacion oficial de la empresa",
+                                 "pitch deck de xiembra",
+                                 "presentacion en pdf"
+                             ]
+    },
+    {
+        "formato":  "PDF (407 KB)",
+        "id":  "doc_presentacion_inversionistas",
+        "tags":  [
+                     "resumen ejecutivo",
+                     "inversionistas",
+                     "pdf ligero",
+                     "deck"
+                 ],
+        "uso_recomendado":  "Envio rapido por WhatsApp o email a inversionistas.",
+        "categoria":  "Documentos Corporativos",
+        "ruta":  "2. Documentos Corporativos/1. Presentaciones de Negocio/Presentacion para Inversionistas.pdf",
+        "descripcion":  "Resumen ejecutivo comprimido disenado para envio rapido por correo a inversionistas.",
+        "dimensiones":  "Documento PDF Ligero",
+        "subcategoria":  "Presentaciones de Negocio",
+        "consultas_agente":  [
+                                 "Presentacion corta para enviar por email",
+                                 "resumen para inversionistas"
+                             ]
+    },
+    {
+        "formato":  "Microsoft Word (.docx)",
+        "id":  "doc_brochure_corporativo",
+        "tags":  [
+                     "brochure",
+                     "word",
+                     "docx",
+                     "editable",
+                     "ficha comercial"
+                 ],
+        "uso_recomendado":  "Edicion de textos comerciales y material para imprenta.",
+        "categoria":  "Documentos Corporativos",
+        "ruta":  "2. Documentos Corporativos/2. Brochure y Fichas Comerciales/Brochure Corporativo Xiembra.docx",
+        "descripcion":  "Brochure comercial editable con la narrativa completa de marca y especificaciones tecnicas.",
+        "dimensiones":  "Documento DOCX Editable (4.7 MB)",
+        "subcategoria":  "Brochure y Comercial",
+        "consultas_agente":  [
+                                 "Brochure editable en Word",
+                                 "documento del brochure"
+                             ]
+    },
+    {
+        "formato":  "PDF (16.3 MB)",
+        "id":  "doc_estudio_focus_group",
+        "tags":  [
+                     "focus group",
+                     "estudio de mercado",
+                     "insights",
+                     "consumidor",
+                     "sensorial"
+                 ],
+        "uso_recomendado":  "Sustento de aceptacion de mercado y analisis de percepcion de consumidor.",
+        "categoria":  "Documentos Corporativos",
+        "ruta":  "2. Documentos Corporativos/3. Investigacion de Mercado/Focus Group y Estudio de Mercado Xiembra.pdf",
+        "descripcion":  "Reporte de Focus Group y validacion sensorial de producto realizado con consumidores finales en Lima.",
+        "dimensiones":  "Documento PDF de Investigacion",
+        "subcategoria":  "Investigacion de Mercado",
+        "consultas_agente":  [
+                                 "Estudio de mercado de xiembra",
+                                 "reporte del focus group",
+                                 "insights del consumidor"
+                             ]
+    },
+    {
+        "formato":  "PNG",
+        "id":  "doc_plano_troquel_packaging",
+        "tags":  [
+                     "troquel",
+                     "plano",
+                     "empaque",
+                     "medidas",
+                     "caja 100g",
+                     "imprenta"
+                 ],
+        "uso_recomendado":  "Guia tecnica de imprenta y cotizacion con proveedores de empaque.",
+        "categoria":  "Documentos Corporativos",
+        "ruta":  "2. Documentos Corporativos/4. Especificaciones de Packaging/XIEMBRA_Plano_Troquel_Empaque_Caja.png",
+        "descripcion":  "Plano tecnico con las lineas de troquelado y medidas de la caja de 100g (4.5 x 17 x 8 cm).",
+        "dimensiones":  "304 x 210 px",
+        "subcategoria":  "Especificaciones de Packaging",
+        "consultas_agente":  [
+                                 "Medidas de la caja de 100g",
+                                 "plano de troquel del empaque",
+                                 "especificaciones de imprenta"
+                             ]
+    },
+    {
+        "formato":  "PNG",
+        "id":  "doc_infografia_corte_grajea",
+        "tags":  [
+                     "corte grajea",
+                     "cacao 65",
+                     "cafe tostado",
+                     "sinergia botanica"
+                 ],
+        "uso_recomendado":  "Especificaciones de composicion botanica y material de capacitacion comercial.",
+        "categoria":  "Documentos Corporativos",
+        "ruta":  "2. Documentos Corporativos/4. Especificaciones de Packaging/XIEMBRA_Infografia_Corte_Estructura_Grajea.png",
+        "descripcion":  "Infografia del corte transversal de la grajea con la fusion del grano entero de cafe y el cacao criollo 65%.",
+        "dimensiones":  "324 x 350 px",
+        "subcategoria":  "Especificaciones de Packaging",
+        "consultas_agente":  [
+                                 "Corte transversal de la grajea",
+                                 "composicion interna de la grajea"
+                             ]
+    }
+]

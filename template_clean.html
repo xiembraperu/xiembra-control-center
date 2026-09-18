@@ -1,0 +1,1456 @@
+<!doctype html>
+<html lang="es-PE" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#006148">
+  <meta name="description" content="XIEMBRA | Functional Snacks de Cacao Nativo 65% y Caf&eacute; de Especialidad del Parque Nacional del Caf&eacute; en Sanchirio Palomar, Chanchamayo. Energ&iacute;a limpia, enfoque sostenido y env&iacute;os a todo el Per&uacute;.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="XIEMBRA &middot; Hijos de la Tierra | Functional Snacks &amp; Caf&eacute; de Especialidad">
+  <meta property="og:description" content="Grajeas de Cacao Nativo 65% rellenas de Caf&eacute; Tostado del Parque Nacional del Caf&eacute; en Sanchirio Palomar (Chanchamayo, 1,200&ndash;1,900 msnm). Env&iacute;os a todo el Per&uacute;.">
+  
+  <title>XIEMBRA | Hijos de la Tierra &middot; Cacao 65% &amp; Caf&eacute; del Parque Nacional del Caf&eacute; (Sanchirio Palomar) &middot; Env&iacute;os a Todo el Per&uacute;</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit (Full Latin & Spanish Accents Support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              campo: '#006148',
+              campoDark: '#004734',
+              campoDarker: '#062319',
+              nature: '#CBEC8A',
+              natureHover: '#B8DF70',
+              lemon: '#FFFC88',
+              crema: '#FFFCD2',
+              marfil: '#FAF8F5',
+              arena: '#F2EDE4',
+              charcoal: '#111C16',
+              muted: '#4D6257',
+              dorado: '#C5A059',
+              line: 'rgba(0, 97, 72, 0.14)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Outfit"', 'system-ui', '-apple-system', 'sans-serif'],
+            title: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'glow-nature': '0 0 35px rgba(203, 236, 138, 0.35)',
+            'glow-campo': '0 12px 35px rgba(0, 97, 72, 0.25)',
+            'premium': '0 20px 45px -10px rgba(6, 35, 25, 0.12)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Global Typography & UI Styles -->
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
+      background-color: #FAF8F5;
+      color: #111C16;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-brand-title {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .font-brand-display {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .glass-header {
+      background: rgba(250, 248, 245, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 97, 72, 0.12);
+    }
+
+    .btn-campo {
+      background-color: #006148;
+      color: #CBEC8A;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 6px 20px rgba(0, 97, 72, 0.25);
+    }
+    .btn-campo:hover {
+      background-color: #004734;
+      color: #FFFC88;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 97, 72, 0.35);
+    }
+
+    .btn-nature {
+      background-color: #CBEC8A;
+      color: #004734;
+      font-weight: 700;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 6px 20px rgba(203, 236, 138, 0.4);
+    }
+    .btn-nature:hover {
+      background-color: #B8DF70;
+      color: #062319;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(203, 236, 138, 0.6);
+    }
+
+    .card-premium {
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 97, 72, 0.12);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .card-premium:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 97, 72, 0.32);
+      box-shadow: 0 24px 48px -12px rgba(0, 97, 72, 0.15);
+    }
+
+    .tag-origin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background-color: #FFFCD2;
+      border: 1px solid rgba(0, 97, 72, 0.2);
+      color: #006148;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Tab Switcher Styling */
+    .tab-nav-btn {
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      font-weight: 700;
+      color: #4D6257;
+      border-radius: 9999px;
+      padding: 0.5rem 1.05rem;
+      font-size: 0.82rem;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .tab-nav-btn:hover {
+      color: #006148;
+      background-color: rgba(203, 236, 138, 0.35);
+    }
+    .tab-nav-btn.active {
+      background-color: #006148;
+      color: #CBEC8A;
+      font-weight: 800;
+      box-shadow: 0 4px 14px rgba(0, 97, 72, 0.28);
+    }
+
+    /* Tab Content Transitions */
+    @keyframes tabEnter {
+      0% {
+        opacity: 0;
+        transform: translateY(18px) scale(0.99);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .tab-panel {
+      display: none;
+    }
+    .tab-panel.active {
+      display: block;
+      animation: tabEnter 0.42s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Infinite Marquee */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 32s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Floating Mascot Animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(1.2deg); }
+    }
+    .animate-float {
+      animation: float 4.5s ease-in-out infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #FAF8F5; }
+    ::-webkit-scrollbar-thumb { background: #006148; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #004734; }
+  </style>
+</head>
+
+<body class="selection:bg-brand-nature selection:text-brand-campoDark">
+
+  <!-- ==================== 1. TOP ANNOUNCEMENT BAR ==================== -->
+  <div class="bg-brand-campoDarker text-white text-[11px] sm:text-xs py-2 px-4 border-b border-brand-nature/20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-brand-nature animate-pulse"></span>
+        <span class="font-medium text-brand-crema/90">
+          <strong class="text-brand-nature font-bold">&#127477;&#127466; Env&iacute;os a todo el Per&uacute;:</strong> Cacao Nativo 65% &amp; Caf&eacute; del Parque Nacional del Caf&eacute; (Sanchirio Palomar)
+        </span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-brand-nature text-xs">
+        <span>Lima Metropolitana &amp; Provincias</span>
+        <span>&bull;</span>
+        <span>Entregas por Courier y Agencia</span>
+        <span>&bull;</span>
+        <a href="https://wa.me/51981011816" target="_blank" class="hover:text-white font-bold transition-colors">WhatsApp: +51 981 011 816</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 2. HEADER & BRAND NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 transition-all duration-300 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between gap-3 lg:gap-6">
+      
+      <!-- Brand Logo Compacto Oficial en Ultra Alta Resolucion -->
+      <a href="#inicio" onclick="goToTab('tab-inicio')" class="flex items-center gap-2 group flex-shrink-0" aria-label="XIEMBRA - Inicio">
+        <img src="images/xiembra_logo_compacto_verde_campo.png" 
+             alt="XIEMBRA - Hijos de la Tierra" 
+             class="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-sm"
+             onerror="this.onerror=null; this.src='images/xiembra_logo_compacto_verde_campo.png'">
+      </a>
+
+      <!-- Desktop Tab Bar Navigator -->
+      <nav class="hidden lg:flex items-center gap-1.5 p-1.5 rounded-full bg-brand-arena/90 border border-brand-line shadow-sm justify-center">
+        <button onclick="goToTab('tab-inicio')" id="nav-tab-inicio" class="tab-nav-btn active">
+          <span>Inicio &amp; Tienda</span>
+        </button>
+        <button onclick="goToTab('tab-beneficios')" id="nav-tab-beneficios" class="tab-nav-btn">
+          <span>Beneficios</span>
+        </button>
+        <button onclick="goToTab('tab-origen')" id="nav-tab-origen" class="tab-nav-btn">
+          <span>Origen &amp; Pacarana</span>
+        </button>
+        <button onclick="goToTab('tab-certificados')" id="nav-tab-certificados" class="tab-nav-btn">
+          <span>Certificaciones</span>
+        </button>
+        <button onclick="goToTab('tab-b2b')" id="nav-tab-b2b" class="tab-nav-btn">
+          <span>Canal B2B</span>
+        </button>
+      </nav>
+
+      <!-- Header CTA Button -->
+      <div class="hidden sm:flex items-center gap-3 flex-shrink-0">
+        <button onclick="scrollToProducts()" class="px-5 py-2.5 rounded-full btn-campo text-xs uppercase tracking-wider font-extrabold flex items-center gap-2 cursor-pointer shadow-glow-campo">
+          <i data-lucide="shopping-bag" class="w-4 h-4 text-brand-nature"></i>
+          <span>Hacer Pedido</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-2xl text-brand-campo hover:bg-brand-crema focus:outline-none flex-shrink-0" aria-label="Abrir Men&uacute;">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer / Tab Switcher -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-marfil border-b border-brand-line px-6 py-6 space-y-3 shadow-2xl">
+      <div class="pb-3 border-b border-brand-line flex items-center justify-between">
+        <img src="images/xiembra_logo_compacto_verde_campo.png" alt="XIEMBRA" class="h-10 w-auto">
+        <span class="text-xs font-bold text-brand-campo bg-brand-nature/40 px-3 py-1 rounded-full">&#127477;&#127466; Env&iacute;os Nacionales</span>
+      </div>
+      <button onclick="goToTab('tab-inicio'); toggleMobileMenu();" class="w-full text-left font-bold text-brand-charcoal hover:text-brand-campo py-2 flex items-center gap-2.5">
+        <span>Inicio &amp; Tienda Online</span>
+      </button>
+      <button onclick="goToTab('tab-beneficios'); toggleMobileMenu();" class="w-full text-left font-bold text-brand-charcoal hover:text-brand-campo py-2 flex items-center gap-2.5">
+        <span>Beneficios &amp; Sinergia Bot&aacute;nica</span>
+      </button>
+      <button onclick="goToTab('tab-origen'); toggleMobileMenu();" class="w-full text-left font-bold text-brand-charcoal hover:text-brand-campo py-2 flex items-center gap-2.5">
+        <span>Origen: Sanchirio Palomar &amp; La Pacarana</span>
+      </button>
+      <button onclick="goToTab('tab-certificados'); toggleMobileMenu();" class="w-full text-left font-bold text-brand-charcoal hover:text-brand-campo py-2 flex items-center gap-2.5">
+        <span>Certificaciones Internacionales</span>
+      </button>
+      <button onclick="goToTab('tab-b2b'); toggleMobileMenu();" class="w-full text-left font-bold text-brand-campoDark py-2 flex items-center gap-2.5">
+        <span>Canal B2B &amp; Mayorista</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== CONTENEDOR PRINCIPAL DE PESTANAS ==================== -->
+  <main id="main-content" class="min-h-[75vh]">
+
+    <!-- ==================== PESTANA 1: INICIO & PORTADA PRINCIPAL ==================== -->
+    <div id="tab-inicio" class="tab-panel active">
+      
+      <!-- Hero Section Panor&aacute;mico &amp; Adaptativo: Composici&oacute;n Bot&aacute;nica de Alto Contraste y M&aacute;xima Legibilidad -->
+      <section class="relative min-h-[660px] sm:min-h-[720px] lg:min-h-[800px] w-full overflow-hidden flex flex-col lg:flex-row items-center justify-between bg-brand-campoDarker">
+        
+        <!-- Wallpaper Panor&aacute;mico de Fondo (Desktop &amp; Pantallas Grandes) -->
+        <div class="absolute inset-0 z-0">
+          <img src="images/xiembra_portada_hero_panoramica.jpeg" 
+               alt="XIEMBRA - Caja de Chocolate y Caf&eacute; en Selva de Chanchamayo" 
+               class="w-full h-full object-cover object-[80%_center] lg:object-[82%_center] brightness-[0.98] contrast-[1.04]"
+               loading="eager"
+               onerror="this.onerror=null; this.src='images/xiembra_portada_hero_panoramica.jpeg'">
+          
+          <!-- Velo de Gradiente Oscuro Profundo (Desktop): Protege la legibilidad total del texto a la izquierda -->
+          <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-brand-campoDarker via-brand-campoDarker/95 via-45% to-brand-campoDarker/20 to-75%"></div>
+          
+          <!-- Velo para Pantallas M&oacute;viles y Tablets: Cobertura completa con fundido arm&oacute;nico -->
+          <div class="lg:hidden absolute inset-0 bg-gradient-to-b from-brand-campoDarker/95 via-brand-campoDarker/85 to-brand-campoDarker/98"></div>
+          
+          <!-- Fundido inferior con el marquee verde campo -->
+          <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-brand-campo to-transparent opacity-80"></div>
+        </div>
+
+        <!-- Contenedor de Contenido Principal -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 sm:py-16 lg:py-24 relative z-10 w-full lg:w-auto">
+          <div class="max-w-xl lg:max-w-2xl space-y-5 sm:space-y-6">
+            
+            <!-- Badge de Origen Oficial -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-nature/15 border border-brand-nature/30 text-brand-nature text-[11px] sm:text-xs font-bold tracking-wider uppercase backdrop-blur-md shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-brand-nature animate-ping"></span>
+              <span>Parque Nacional del Caf&eacute; &middot; Sanchirio Palomar</span>
+            </div>
+
+            <!-- Titular Principal de Alto Impacto -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-brand-title font-extrabold text-white leading-[1.12] tracking-tight drop-shadow-md">
+              El poder de la naturaleza en una sola mordida.
+            </h1>
+
+            <!-- Subt&iacute;tulo de Producto en Verde Nature -->
+            <p class="text-lg sm:text-2xl text-brand-nature font-bold font-brand-display leading-snug">
+              Grajeas de Cacao Nativo 65% rellenas de Caf&eacute; Tostado de Especialidad.
+            </p>
+
+            <!-- P&aacute;rrafo Descriptivo en Blanco C&aacute;lido / Crema -->
+            <p class="text-sm sm:text-base text-brand-crema/90 leading-relaxed font-normal">
+              La combinaci&oacute;n bot&aacute;nica perfecta entre la <strong class="text-brand-lemon font-semibold">teobromina del cacao bitter</strong> y la <strong class="text-brand-nature font-semibold">cafe&iacute;na de altura</strong> del <strong class="text-white font-semibold">Parque Nacional del Caf&eacute; en Sanchirio Palomar (Chanchamayo, 1,200 &ndash; 1,900 msnm)</strong>: energ&iacute;a limpia, concentraci&oacute;n sostenida y cero bajones de glucosa en todo el Per&uacute;.
+            </p>
+
+            <!-- Botones de Acci&oacute;n -->
+            <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+              <button onclick="scrollToProducts()" class="w-full sm:w-auto px-7 py-4 rounded-full btn-nature font-extrabold text-xs sm:text-sm text-center flex items-center justify-center gap-2.5 cursor-pointer shadow-glow-nature">
+                <i data-lucide="shopping-bag" class="w-4 h-4 text-brand-campoDarker"></i>
+                <span class="text-brand-campoDarker">Ver Productos &amp; Comprar</span>
+                <i data-lucide="arrow-down" class="w-4 h-4 text-brand-campoDarker"></i>
+              </button>
+              <button onclick="goToTab('tab-beneficios')" class="w-full sm:w-auto px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white font-bold text-xs sm:text-sm text-center transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                <span>Ver Beneficios Funcionales</span>
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-nature"></i>
+              </button>
+            </div>
+
+            <!-- Insignias de Confianza con Texto Claro -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-white/15 text-[11px] sm:text-xs font-semibold text-white/95">
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-brand-nature/20 border border-brand-nature/40 flex items-center justify-center text-brand-nature shrink-0">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span>65% Cacao Nativo</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-brand-nature/20 border border-brand-nature/40 flex items-center justify-center text-brand-nature shrink-0">
+                  <i data-lucide="coffee" class="w-3.5 h-3.5"></i>
+                </div>
+                <span>Sanchirio Palomar</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-full bg-brand-nature/20 border border-brand-nature/40 flex items-center justify-center text-brand-nature shrink-0">
+                  <i data-lucide="truck" class="w-3.5 h-3.5"></i>
+                </div>
+                <span>Todo el Per&uacute;</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Showcase Visual de Producto para Celulares y Tablets (< lg) -->
+        <div class="lg:hidden w-full px-4 pb-10 pt-2 relative z-10">
+          <div class="relative max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl border border-brand-nature/30 bg-brand-campoDarker">
+            <img src="images/xiembra_portada_hero_panoramica.jpeg" 
+                 alt="XIEMBRA - Caja Gourmet en Selva Central" 
+                 class="w-full h-72 sm:h-96 object-cover object-[76%_center] brightness-[1.03] contrast-[1.04]"
+                 loading="eager"
+                 onerror="this.onerror=null; this.src='images/xiembra_portada_hero_panoramica.jpeg'">
+            
+            <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-brand-campoDarker via-brand-campoDarker/90 to-transparent flex items-center justify-between text-white">
+              <div class="flex items-center gap-2.5">
+                <img src="images/xiembra_mascota_pacarana_transparente.png" alt="La Pacarana" class="w-9 h-9 object-contain shrink-0 filter drop-shadow">
+                <div>
+                  <span class="text-[10px] text-brand-nature font-extrabold uppercase tracking-wider block">Caja Gourmet 100g</span>
+                  <p class="text-xs text-brand-crema font-bold">Con ilustraci&oacute;n de La Pacarana</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-brand-nature text-brand-campoDarker font-black text-xs shadow-sm">S/ 24.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badge Flotante Oficial La Pacarana (Desktop) -->
+        <div class="hidden lg:flex absolute bottom-8 right-8 z-10 bg-brand-campoDarker/90 text-white p-3.5 rounded-2xl border border-brand-nature/40 shadow-2xl backdrop-blur-md items-center gap-3">
+          <img src="images/xiembra_mascota_pacarana_transparente.png" alt="La Pacarana Xiembra" class="w-12 h-12 object-contain filter drop-shadow-md shrink-0">
+          <div>
+            <span class="text-[10px] text-brand-nature uppercase font-bold tracking-wider block">Parque Nacional del Caf&eacute;</span>
+            <p class="text-xs font-semibold text-brand-crema">Sanchirio Palomar &middot; 1,900 msnm</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Marquee Strip -->
+      <div class="py-3.5 bg-brand-campo text-brand-lemon overflow-hidden border-y border-brand-nature/30 text-xs font-bold uppercase tracking-widest">
+        <div class="marquee-track">
+          <span class="mx-6">&#10022; Cacao Nativo 65%</span>
+          <span class="mx-6">&#10022; Parque Nacional del Caf&eacute;</span>
+          <span class="mx-6">&#10022; Sanchirio Palomar</span>
+          <span class="mx-6">&#10022; Caf&eacute; de Especialidad</span>
+          <span class="mx-6">&#10022; Valle de Chanchamayo</span>
+          <span class="mx-6">&#10022; Sin Az&uacute;car Refinada</span>
+          <span class="mx-6">&#10022; Env&iacute;os a Nivel Nacional</span>
+          <span class="mx-6">&#10022; Comercio Justo</span>
+          <span class="mx-6">&#10022; Cacao Nativo 65%</span>
+          <span class="mx-6">&#10022; Parque Nacional del Caf&eacute;</span>
+          <span class="mx-6">&#10022; Sanchirio Palomar</span>
+          <span class="mx-6">&#10022; Caf&eacute; de Especialidad</span>
+          <span class="mx-6">&#10022; Valle de Chanchamayo</span>
+          <span class="mx-6">&#10022; Sin Az&uacute;car Refinada</span>
+          <span class="mx-6">&#10022; Env&iacute;os a Nivel Nacional</span>
+          <span class="mx-6">&#10022; Comercio Justo</span>
+        </div>
+      </div>
+
+      <!-- ==================== SECCION: PRODUCTOS & COMPRA FACIL (PORTADA) ==================== -->
+      <section id="seccion-productos" class="py-16 sm:py-20 bg-brand-marfil border-b border-brand-line">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
+            <span class="tag-origin">&#127477;&#127466; Compra F&aacute;cil &middot; Env&iacute;os a Todo el Per&uacute;</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-brand-title font-extrabold text-brand-campoDarker tracking-tight">
+              Elige tu versi&oacute;n favorita de XIEMBRA
+            </h2>
+            <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
+              Fusi&oacute;n de Cacao Nativo 65% y Caf&eacute; de Especialidad del Parque Nacional del Caf&eacute; en Sanchirio Palomar. Pide en 3 sencillos pasos y recibe directo en tu puerta.
+            </p>
+          </div>
+
+          <!-- Guia Visual: Facilidad de Compra en 3 Pasos -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+            
+            <div class="p-5 rounded-2xl bg-white border border-brand-line/80 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-2xl bg-brand-campo text-brand-nature font-extrabold flex items-center justify-center shrink-0 text-base shadow-sm">
+                1
+              </div>
+              <div class="space-y-1">
+                <h3 class="text-sm font-bold text-brand-charcoal">Elige tu versi&oacute;n</h3>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Bolsita 20g (snack diario), Caja Gourmet 100g con La Pacarana, o Caf&eacute; puro de Especialidad.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-brand-line/80 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-2xl bg-brand-campo text-brand-nature font-extrabold flex items-center justify-center shrink-0 text-base shadow-sm">
+                2
+              </div>
+              <div class="space-y-1">
+                <h3 class="text-sm font-bold text-brand-charcoal">Personaliza tu pedido</h3>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Ajusta cantidades con los botones + / &minus; y elige tu ciudad (Lima o Provincias). El total se calcula en vivo.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-brand-line/80 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-2xl bg-brand-nature text-brand-campoDark font-extrabold flex items-center justify-center shrink-0 text-base shadow-sm">
+                3
+              </div>
+              <div class="space-y-1">
+                <h3 class="text-sm font-bold text-brand-charcoal">Coordina por WhatsApp</h3>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Confirmaci&oacute;n r&aacute;pida al +51 981 011 816. Paga seguro por Yape, Plin o Transferencia bancaria.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Grid de 3 Productos Oficiales -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            
+            <!-- 1. Bolsita 20g -->
+            <article class="rounded-3xl card-premium p-6 flex flex-col justify-between group hover:border-brand-campo transition-all">
+              <div>
+                <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-brand-arena/60 mb-5 flex items-center justify-center p-3">
+                  <img src="images/xiembra_producto_bolsita_20g.jpg" 
+                       alt="Bolsita Individual 20g - Grajeas de Cacao y Caf&eacute; de Sanchirio Palomar" 
+                       class="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                       loading="lazy">
+                  <span class="absolute top-3 left-3 bg-brand-campo text-brand-nature text-[11px] font-bold px-3 py-1 rounded-full uppercase shadow">
+                    On-The-Go
+                  </span>
+                </div>
+                <div class="space-y-1.5 mb-4">
+                  <div class="flex items-baseline justify-between">
+                    <h3 class="text-xl font-brand-title font-bold text-brand-charcoal">Bolsita Individual</h3>
+                    <span class="text-2xl font-brand-title font-extrabold text-brand-campo">S/ 6.90</span>
+                  </div>
+                  <p class="text-xs font-bold text-brand-dorado uppercase">20 gramos &middot; Consumo Diario</p>
+                  <p class="text-xs text-brand-muted leading-relaxed">
+                    Grajeas de cacao nativo 65% con caf&eacute; tostado del Parque Nacional del Caf&eacute; en Sanchirio Palomar. Empaque herm&eacute;tico trilaminado ideal para llevar en el bolsillo o bolso.
+                  </p>
+                </div>
+              </div>
+              <button onclick="selectProductAndScroll('snack20')" class="w-full py-2.5 rounded-full btn-campo text-xs font-bold text-center cursor-pointer shadow-sm">
+                Agregar al Pedido
+              </button>
+            </article>
+
+            <!-- 2. Caja Gourmet 100g (La Pacarana) -->
+            <article class="rounded-3xl bg-gradient-to-b from-brand-crema/70 to-white border-2 border-brand-campo p-6 flex flex-col justify-between relative shadow-glow-campo group">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-campo text-brand-lemon text-[10px] font-extrabold px-3 py-0.5 rounded-full uppercase shadow">
+                &#9733; M&aacute;s Vendido
+              </div>
+              <div>
+                <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-brand-arena/60 mb-5 flex items-center justify-center p-3">
+                  <img src="images/xiembra_producto_caja_100g_pacarana.jpg" 
+                       alt="Caja Gourmet 100g XIEMBRA - Grajeas de Cacao y Caf&eacute; con La Pacarana" 
+                       class="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                       loading="lazy">
+                </div>
+                <div class="space-y-1.5 mb-4">
+                  <div class="flex items-baseline justify-between">
+                    <h3 class="text-xl font-brand-title font-bold text-brand-charcoal">Caja Gourmet</h3>
+                    <span class="text-2xl font-brand-title font-extrabold text-brand-campo">S/ 24.00</span>
+                  </div>
+                  <p class="text-xs font-bold text-brand-campo uppercase">100 gramos &middot; Choco Grajeas con La Pacarana</p>
+                  <p class="text-xs text-brand-muted leading-relaxed">
+                    Elegante caja plastificada mate con la ilustraci&oacute;n oficial de La Pacarana. Regalo selecto o consumo en oficina, elaborado con caf&eacute; de altura y cacao nativo 65%.
+                  </p>
+                </div>
+              </div>
+              <button onclick="selectProductAndScroll('snack100')" class="w-full py-2.5 rounded-full btn-nature text-xs font-extrabold text-center cursor-pointer shadow-md">
+                Agregar Caja 100g
+              </button>
+            </article>
+
+            <!-- 3. Cafe de Especialidad en Caja 100g -->
+            <article class="rounded-3xl card-premium p-6 flex flex-col justify-between group hover:border-brand-campo transition-all">
+              <div>
+                <div class="relative aspect-[3/4] rounded-2xl overflow-hidden bg-brand-arena/60 mb-5 flex items-center justify-center p-3">
+                  <img src="images/xiembra_producto_cafe_especialidad_100g.jpg" 
+                       alt="Caf&eacute; de Especialidad XIEMBRA - Parque Nacional del Caf&eacute; Sanchirio Palomar" 
+                       class="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
+                       loading="lazy">
+                </div>
+                <div class="space-y-1.5 mb-4">
+                  <div class="flex items-baseline justify-between">
+                    <h3 class="text-xl font-brand-title font-bold text-brand-charcoal">Caf&eacute; de Especialidad</h3>
+                    <span class="text-2xl font-brand-title font-extrabold text-brand-campo">S/ 28.00</span>
+                  </div>
+                  <p class="text-xs font-bold text-brand-dorado uppercase">Caja 100g &middot; Sanchirio Palomar</p>
+                  <p class="text-xs text-brand-muted leading-relaxed">
+                    Caf&eacute; Ar&aacute;bica cosechado en el Parque Nacional del Caf&eacute; en Sanchirio Palomar (1,200 &ndash; 1,900 msnm). Tueste medio artesanal con notas arom&aacute;ticas a chocolate y panela.
+                  </p>
+                </div>
+              </div>
+              <button onclick="selectProductAndScroll('coffee100')" class="w-full py-2.5 rounded-full btn-campo text-xs font-bold text-center cursor-pointer shadow-sm">
+                Agregar Caf&eacute; Especialidad
+              </button>
+            </article>
+
+          </div>
+
+          <!-- Formulario Interactivo de Checkout WhatsApp -->
+          <div id="checkout-box" class="max-w-3xl mx-auto p-8 sm:p-10 rounded-3xl bg-white border-2 border-brand-campo/25 shadow-2xl">
+            <div class="text-center space-y-2 mb-8">
+              <span class="tag-origin">&#9889; Calculadora de Pedido Directo</span>
+              <h3 class="text-2xl sm:text-3xl font-brand-title font-bold text-brand-campoDarker">
+                Configura tu pedido y rec&iacute;belo en tu ciudad
+              </h3>
+              <p class="text-xs text-brand-muted">Enviamos r&aacute;pido a Lima Metropolitana y todas las provincias del Per&uacute;.</p>
+            </div>
+
+            <form onsubmit="handlePreorderSubmit(event)" class="space-y-6">
+              
+              <div class="space-y-3">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-campo">1. Ajusta los productos deseados:</h4>
+                
+                <!-- Item 1: Bolsita 20g -->
+                <div class="flex items-center justify-between p-3.5 rounded-2xl bg-brand-marfil border border-brand-line">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="check-snack20" checked onchange="updatePreorderSummary()" class="w-4 h-4 accent-brand-campo cursor-pointer">
+                    <div>
+                      <label for="check-snack20" class="text-xs sm:text-sm font-bold text-brand-charcoal cursor-pointer block">
+                        Bolsita Individual 20g (Cacao &amp; Caf&eacute; de Sanchirio Palomar)
+                      </label>
+                      <span class="text-[11px] text-brand-muted">S/ 6.90 c/u</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <button type="button" onclick="adjustQty('qty-snack20', -1)" class="w-7 h-7 rounded-lg bg-brand-arena font-bold flex items-center justify-center hover:bg-brand-nature/60">&minus;</button>
+                    <input type="number" id="qty-snack20" value="2" min="1" max="50" onchange="updatePreorderSummary()" class="w-10 text-center font-bold text-xs bg-transparent border border-brand-line rounded-lg py-1">
+                    <button type="button" onclick="adjustQty('qty-snack20', 1)" class="w-7 h-7 rounded-lg bg-brand-arena font-bold flex items-center justify-center hover:bg-brand-nature/60">+</button>
+                  </div>
+                </div>
+
+                <!-- Item 2: Caja 100g -->
+                <div class="flex items-center justify-between p-3.5 rounded-2xl bg-brand-crema/40 border border-brand-campo/30">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="check-snack100" checked onchange="updatePreorderSummary()" class="w-4 h-4 accent-brand-campo cursor-pointer">
+                    <div>
+                      <label for="check-snack100" class="text-xs sm:text-sm font-bold text-brand-charcoal cursor-pointer block">
+                        Caja Gourmet 100g (Cacao &amp; Caf&eacute; con La Pacarana)
+                      </label>
+                      <span class="text-[11px] text-brand-muted">S/ 24.00 c/u</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <button type="button" onclick="adjustQty('qty-snack100', -1)" class="w-7 h-7 rounded-lg bg-brand-arena font-bold flex items-center justify-center hover:bg-brand-nature/60">&minus;</button>
+                    <input type="number" id="qty-snack100" value="1" min="1" max="50" onchange="updatePreorderSummary()" class="w-10 text-center font-bold text-xs bg-transparent border border-brand-line rounded-lg py-1">
+                    <button type="button" onclick="adjustQty('qty-snack100', 1)" class="w-7 h-7 rounded-lg bg-brand-arena font-bold flex items-center justify-center hover:bg-brand-nature/60">+</button>
+                  </div>
+                </div>
+
+                <!-- Item 3: Cafe de Especialidad 100g -->
+                <div class="flex items-center justify-between p-3.5 rounded-2xl bg-brand-marfil border border-brand-line">
+                  <div class="flex items-center gap-3">
+                    <input type="checkbox" id="check-coffee100" onchange="updatePreorderSummary()" class="w-4 h-4 accent-brand-campo cursor-pointer">
+                    <div>
+                      <label for="check-coffee100" class="text-xs sm:text-sm font-bold text-brand-charcoal cursor-pointer block">
+                        Caja Caf&eacute; de Especialidad (100g &middot; Sanchirio Palomar)
+                      </label>
+                      <span class="text-[11px] text-brand-muted">S/ 28.00 c/u</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <button type="button" onclick="adjustQty('qty-coffee100', -1)" class="w-7 h-7 rounded-lg bg-brand-arena font-bold flex items-center justify-center hover:bg-brand-nature/60">&minus;</button>
+                    <input type="number" id="qty-coffee100" value="1" min="1" max="50" onchange="updatePreorderSummary()" class="w-10 text-center font-bold text-xs bg-transparent border border-brand-line rounded-lg py-1">
+                    <button type="button" onclick="adjustQty('qty-coffee100', 1)" class="w-7 h-7 rounded-lg bg-brand-arena font-bold flex items-center justify-center hover:bg-brand-nature/60">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contacto y Destino Nacional -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="preorder-name" class="block text-xs font-bold text-brand-charcoal mb-1">Nombre Completo</label>
+                  <input type="text" id="preorder-name" required placeholder="Ej. Carlos Mendoza" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-line focus:outline-none focus:border-brand-campo text-xs sm:text-sm bg-brand-marfil">
+                </div>
+                <div>
+                  <label for="preorder-district" class="block text-xs font-bold text-brand-charcoal mb-1">Destino / Ciudad / Departamento</label>
+                  <select id="preorder-district" required class="w-full px-3.5 py-2.5 rounded-xl border border-brand-line focus:outline-none focus:border-brand-campo text-xs sm:text-sm bg-brand-marfil">
+                    <optgroup label="Lima Metropolitana">
+                      <option value="Lima - Miraflores">Lima &middot; Miraflores</option>
+                      <option value="Lima - San Isidro">Lima &middot; San Isidro</option>
+                      <option value="Lima - Santiago de Surco">Lima &middot; Santiago de Surco</option>
+                      <option value="Lima - San Borja">Lima &middot; San Borja</option>
+                      <option value="Lima - La Molina">Lima &middot; La Molina</option>
+                      <option value="Lima - Barranco">Lima &middot; Barranco</option>
+                      <option value="Lima - Magdalena / Jesus Maria">Lima &middot; Magdalena / Jes&uacute;s Mar&iacute;a</option>
+                      <option value="Lima - San Miguel / Pueblo Libre">Lima &middot; San Miguel / Pueblo Libre</option>
+                      <option value="Lima - Otros Distritos">Lima &middot; Otros Distritos</option>
+                    </optgroup>
+                    <optgroup label="Provincias (Envios a Nivel Nacional)">
+                      <option value="Arequipa">Arequipa</option>
+                      <option value="Cusco">Cusco</option>
+                      <option value="Trujillo / La Libertad">Trujillo / La Libertad</option>
+                      <option value="Chiclayo / Lambayeque">Chiclayo / Lambayeque</option>
+                      <option value="Piura">Piura</option>
+                      <option value="Huancayo / Junin">Huancayo / Jun&iacute;n</option>
+                      <option value="Chanchamayo / La Merced / Sanchirio">Chanchamayo / La Merced / Sanchirio</option>
+                      <option value="Ica / Chincha">Ica / Chincha</option>
+                      <option value="Tacna">Tacna</option>
+                      <option value="Tarapoto / San Martin">Tarapoto / San Mart&iacute;n</option>
+                      <option value="Otra Ciudad / Provincia">Otra Ciudad / Provincia del Per&uacute;</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Total Preview -->
+              <div class="p-4 rounded-2xl bg-brand-campo text-white flex items-center justify-between shadow-sm">
+                <div>
+                  <span class="text-[11px] text-brand-nature uppercase font-bold block">Resumen del Pedido</span>
+                  <p id="preorder-summary-text" class="text-xs sm:text-sm font-semibold text-brand-crema">2x Bolsita 20g + 1x Caja 100g</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] text-brand-crema/70 block">Subtotal:</span>
+                  <span id="preorder-summary-total" class="text-2xl font-brand-title font-extrabold text-brand-lemon">S/ 37.80</span>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-4 rounded-full btn-nature text-sm font-extrabold flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-xl transition-all">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>Confirmar Pedido por WhatsApp (+51 981 011 816)</span>
+              </button>
+
+              <div class="grid grid-cols-3 gap-2 pt-2 border-t border-brand-line text-[10px] text-center text-brand-muted">
+                <span class="flex items-center justify-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-campo"></i> Pago 100% Seguro</span>
+                <span class="flex items-center justify-center gap-1"><i data-lucide="smartphone" class="w-3.5 h-3.5 text-brand-campo"></i> Yape / Plin / BCP</span>
+                <span class="flex items-center justify-center gap-1"><i data-lucide="truck" class="w-3.5 h-3.5 text-brand-campo"></i> Env&iacute;os a Todo el Per&uacute;</span>
+              </div>
+            </form>
+          </div>
+
+          <!-- Banner de Transicion: Ir a Beneficios Funcionales -->
+          <div class="mt-14 p-8 rounded-3xl bg-gradient-to-r from-brand-campoDarker via-brand-campoDark to-brand-campo text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl border border-brand-nature/30">
+            <div class="space-y-1.5 max-w-xl text-center sm:text-left">
+              <span class="text-xs font-bold text-brand-nature uppercase tracking-wider block">&#10022; Sinergia Bot&aacute;nica &middot; Cacao 65% + Caf&eacute;</span>
+              <h3 class="text-xl sm:text-2xl font-brand-title font-bold text-white">&iquest;Quieres conocer la ciencia y beneficios de XIEMBRA?</h3>
+              <p class="text-xs text-brand-crema/85">Descubre c&oacute;mo la teobromina modula la cafe&iacute;na de altura para brindarte m&aacute;s de 4 horas de enfoque sin taquicardia ni ca&iacute;das de energ&iacute;a.</p>
+            </div>
+            <button onclick="goToTab('tab-beneficios')" class="px-6 py-3.5 rounded-full btn-nature text-xs font-extrabold shrink-0 flex items-center gap-2 cursor-pointer shadow-md hover:scale-105 transition-transform">
+              <span>Ver Beneficios Funcionales</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==================== PESTANA 2: BENEFICIOS FUNCIONALES & CIENCIA ==================== -->
+    <div id="tab-beneficios" class="tab-panel">
+      <section class="py-12 sm:py-16 bg-brand-marfil">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+          
+          <!-- Encabezado de la Seccion de Beneficios -->
+          <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="tag-origin">&#9733; Ciencia &amp; Nutrici&oacute;n Funcional</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-brand-title font-extrabold text-brand-campoDarker tracking-tight">
+              Los beneficios de nuestra sinergia bot&aacute;nica
+            </h2>
+            <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
+              La combinaci&oacute;n cient&iacute;fica entre la <strong class="text-brand-charcoal">teobromina del cacao bitter 65%</strong> y la <strong class="text-brand-charcoal">cafe&iacute;na del grano de caf&eacute; de Sanchirio Palomar</strong>: energ&iacute;a limpia, enfoque sostenido y cero efecto rebote.
+            </p>
+          </div>
+
+          <!-- Comparativa Directa: Golosina vs XIEMBRA -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            <!-- Tarjeta Golosina Convencional -->
+            <div class="p-8 rounded-3xl bg-white border border-red-200 space-y-4 shadow-sm">
+              <div class="flex items-center gap-2 text-red-700 text-xs font-bold uppercase tracking-wider">
+                <i data-lucide="x-circle" class="w-4 h-4"></i> Golosina Convencional de Kiosko
+              </div>
+              <h3 class="text-xl font-brand-title font-bold text-brand-charcoal">
+                Picos de insulina, cafe&iacute;na sint&eacute;tica y somnolencia
+              </h3>
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                Contienen m&aacute;s del 50% de az&uacute;car refinada y aceites hidrogenados de palma. Generan una subida abrupta de glucosa seguida de fatiga y pesadez a los 40 minutos.
+              </p>
+              <ul class="space-y-2 text-xs text-brand-charcoal pt-2">
+                <li class="flex items-center gap-2 text-red-600 font-medium">&#10005; Sin manteca de cacao pura (sustitutos grasos hidrogenados)</li>
+                <li class="flex items-center gap-2 text-red-600 font-medium">&#10005; Cafe&iacute;na sint&eacute;tica que provoca ansiedad y taquicardias</li>
+                <li class="flex items-center gap-2 text-red-600 font-medium">&#10005; Cero trazabilidad del origen agr&iacute;cola</li>
+              </ul>
+            </div>
+
+            <!-- Tarjeta XIEMBRA -->
+            <div class="p-8 rounded-3xl bg-gradient-to-br from-brand-crema/80 via-white to-brand-nature/30 border-2 border-brand-campo space-y-4 shadow-glow-campo">
+              <div class="flex items-center gap-2 text-brand-campo text-xs font-black uppercase tracking-wider">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i> Sinergia Bot&aacute;nica XIEMBRA
+              </div>
+              <h3 class="text-xl font-brand-title font-bold text-brand-campoDark">
+                Teobromina + Cafe&iacute;na: Claridad y enfoque prolongado
+              </h3>
+              <p class="text-xs sm:text-sm text-brand-charcoal leading-relaxed">
+                La teobromina del cacao 65% act&uacute;a como vasodilatador suave, modulando la cafe&iacute;na del grano de caf&eacute; tostado de Sanchirio Palomar para brindar energ&iacute;a prolongada sin alteraciones.
+              </p>
+              <ul class="space-y-2 text-xs text-brand-campoDark font-bold pt-2">
+                <li class="flex items-center gap-2">&#10003; Caf&eacute; de estricta altura del Parque Nacional del Caf&eacute; (Sanchirio Palomar)</li>
+                <li class="flex items-center gap-2">&#10003; Energ&iacute;a limpia de bajo &iacute;ndice gluc&eacute;mico con panela org&aacute;nica</li>
+                <li class="flex items-center gap-2">&#10003; 100% trazable con agricultores de la Selva Central de Jun&iacute;n</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- 3 Pilares Cientificos Funcionales -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-3xl card-premium space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-brand-nature/60 flex items-center justify-center text-brand-campo">
+                <i data-lucide="activity" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-lg font-brand-title font-bold text-brand-charcoal">Enfoque sin Crash</h4>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                A diferencia del az&uacute;car refinada, la panela y los polifenoles del cacao liberan energ&iacute;a de manera sostenida por m&aacute;s de 4 horas sin ca&iacute;das s&uacute;bitas.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl card-premium space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-brand-nature/60 flex items-center justify-center text-brand-campo">
+                <i data-lucide="heart" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-lg font-brand-title font-bold text-brand-charcoal">Vasodilataci&oacute;n Suave</h4>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                La teobromina relaja las paredes arteriales y mejora la oxigenaci&oacute;n celular y cerebral, contrarrestando la vasoconstricci&oacute;n de la cafe&iacute;na.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-3xl card-premium space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-brand-nature/60 flex items-center justify-center text-brand-campo">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-lg font-brand-title font-bold text-brand-charcoal">Antioxidantes Vivos</h4>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                El cacao nativo al 65% conserva flavonoides naturales que combaten el estr&eacute;s oxidativo producido por el trabajo f&iacute;sico y mental diario.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 Ingredientes Clean Label Grid -->
+          <div class="p-8 sm:p-10 rounded-3xl bg-white border border-brand-line space-y-6">
+            <div class="space-y-1">
+              <span class="text-xs font-bold text-brand-campo uppercase tracking-wider block">&#10022; F&oacute;rmula 100% Pura</span>
+              <h3 class="text-2xl font-brand-title font-bold text-brand-campoDarker">Nuestros 4 Ingredientes Clean Label</h3>
+              <p class="text-xs text-brand-muted">Sin emulsionantes artificiales, sin grasas vegetales a&ntilde;adidas, sin conservantes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              <div class="p-5 rounded-2xl bg-brand-marfil border border-brand-line/60 space-y-2">
+                <span class="text-[11px] font-bold text-brand-campo uppercase tracking-wider block">Ingrediente 01</span>
+                <h4 class="text-base font-bold text-brand-campoDark">Pasta de Cacao Nativo</h4>
+                <p class="text-xs text-brand-muted">Cacao criollo fino de aroma de la Selva Central al 65% de pureza.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-brand-marfil border border-brand-line/60 space-y-2">
+                <span class="text-[11px] font-bold text-brand-campo uppercase tracking-wider block">Ingrediente 02</span>
+                <h4 class="text-base font-bold text-brand-campoDark">Caf&eacute; Ar&aacute;bica de Altura</h4>
+                <p class="text-xs text-brand-muted">Granos enteros de especialidad del Parque Nacional del Caf&eacute; en Sanchirio Palomar.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-brand-marfil border border-brand-line/60 space-y-2">
+                <span class="text-[11px] font-bold text-brand-campo uppercase tracking-wider block">Ingrediente 03</span>
+                <h4 class="text-base font-bold text-brand-campoDark">Manteca de Cacao Pura</h4>
+                <p class="text-xs text-brand-muted">Grasa noble bot&aacute;nica extra&iacute;da mec&aacute;nicamente. Textura sedosa natural.</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-brand-marfil border border-brand-line/60 space-y-2">
+                <span class="text-[11px] font-bold text-brand-campo uppercase tracking-wider block">Ingrediente 04</span>
+                <h4 class="text-base font-bold text-brand-campoDark">Panela Org&aacute;nica</h4>
+                <p class="text-xs text-brand-muted">Jugo deshidratado de ca&ntilde;a sin refinar, con sales minerales y dulzor aut&eacute;ntico.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA al final de Beneficios: Regresar a comprar -->
+          <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-brand-campo via-brand-campoDark to-brand-campoDarker text-white text-center space-y-4 shadow-xl">
+            <h3 class="text-2xl sm:text-3xl font-brand-title font-extrabold text-brand-crema">
+              Experimenta la energ&iacute;a limpia de XIEMBRA
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-nature/90 max-w-xl mx-auto leading-relaxed">
+              Elige entre la bolsita individual de 20g para tu rutina diaria o la caja de 100g para disfrutar en casa y oficina.
+            </p>
+            <button onclick="scrollToProducts()" class="px-8 py-3.5 rounded-full btn-nature text-xs font-extrabold inline-flex items-center gap-2 cursor-pointer shadow-lg hover:scale-105 transition-transform">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+              <span>Ir a la Tienda &middot; Comprar Mis Versiones</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== PESTANA 3: ORIGEN SANCHIRIO PALOMAR & LA PACARANA ==================== -->
+    <div id="tab-origen" class="tab-panel">
+      <section class="py-12 sm:py-16 bg-brand-marfil">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+          
+          <!-- Origen Header con Destacado de Sanchirio Palomar -->
+          <div class="p-8 sm:p-12 rounded-3xl bg-brand-campoDarker text-white relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+              <div class="lg:col-span-7 space-y-4">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-nature/20 border border-brand-nature/40 text-brand-nature text-xs font-bold uppercase tracking-wider">
+                  Parque Nacional del Caf&eacute; &middot; Sanchirio Palomar
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-brand-title font-bold text-brand-crema">
+                  De los cafetales de Sanchirio Palomar directo a tu mesa en todo el Per&uacute;.
+                </h2>
+                <p class="text-xs sm:text-sm text-brand-nature/90 leading-relaxed font-light">
+                  El caf&eacute; de XIEMBRA proviene del <strong class="text-brand-lemon font-semibold">Parque Nacional del Caf&eacute;</strong>, localizado en <strong class="text-white font-semibold">Sanchirio Palomar</strong> (Valle de Chanchamayo, Jun&iacute;n, entre 1,200 y 1,900 m s. n. m.). En alianza con <strong class="text-white font-semibold">Chanchamayo Highland Coffee SAC</strong>, vinculamos a m&aacute;s de 2,300 familias productoras con procesos agroartesanales de exportaci&oacute;n y pago de precios justos por encima del mercado.
+                </p>
+              </div>
+
+              <div class="lg:col-span-5 grid grid-cols-2 gap-3 text-center text-xs">
+                <div class="p-4 rounded-2xl bg-brand-campo/80 border border-brand-nature/30">
+                  <strong class="block text-xl font-brand-title text-brand-lemon font-extrabold">Sanchirio</strong>
+                  <span class="text-brand-crema/80 uppercase text-[10px] font-bold">Palomar, Jun&iacute;n</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-campo/80 border border-brand-nature/30">
+                  <strong class="block text-2xl font-brand-title text-brand-lemon">1,900 m</strong>
+                  <span class="text-brand-crema/80 uppercase text-[10px] font-bold">Altitud M&aacute;xima</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-campo/80 border border-brand-nature/30">
+                  <strong class="block text-2xl font-brand-title text-brand-lemon">+2,300</strong>
+                  <span class="text-brand-crema/80 uppercase text-[10px] font-bold">Familias Productoras</span>
+                </div>
+                <div class="p-4 rounded-2xl bg-brand-campo/80 border border-brand-nature/30">
+                  <strong class="block text-2xl font-brand-title text-brand-lemon">100%</strong>
+                  <span class="text-brand-crema/80 uppercase text-[10px] font-bold">Comercio Justo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- La Pacarana Showcase Oficial -->
+          <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-brand-crema/80 via-white to-brand-nature/30 border-2 border-brand-campo/30 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-brand-crema/90 border-2 border-brand-campo/25 p-6 flex items-center justify-center shadow-lg group">
+                <img src="images/xiembra_mascota_pacarana_transparente.png" 
+                     alt="La Pacarana Xiembra - Mascota Oficial" 
+                     class="w-full h-full object-contain animate-float drop-shadow-xl">
+                <span class="absolute -bottom-3 bg-brand-campo text-brand-nature text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow">
+                  Dinomys branickii
+                </span>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-4">
+              <span class="tag-origin">Nuestra Mascota Oficial</span>
+              <h3 class="text-2xl sm:text-3xl font-brand-title font-bold text-brand-campoDarker">
+                La Pacarana: Guardiana de la Selva Central
+              </h3>
+              <p class="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                La <strong>Pacarana</strong> (o <em>Machetero</em>) es un roedor aut&oacute;ctono y protegido de los bosques de niebla de Jun&iacute;n. Con su sombrero de paja campesino, pala agr&iacute;cola y taza de caf&eacute; humeante de Sanchirio Palomar, simboliza el esfuerzo de las familias caficultoras, la agricultura bajo sombra y la conservaci&oacute;n de la Amazon&iacute;a peruana.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-bold text-brand-campoDark">
+                <div class="p-3.5 rounded-2xl bg-white border border-brand-line flex items-center gap-2.5 shadow-sm">
+                  <i data-lucide="sprout" class="w-4 h-4 text-brand-campo"></i>
+                  <span>Reforestaci&oacute;n con &aacute;rboles nativos</span>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-white border border-brand-line flex items-center gap-2.5 shadow-sm">
+                  <i data-lucide="heart" class="w-4 h-4 text-brand-campo"></i>
+                  <span>Tributo a la tradici&oacute;n campesina</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text-center">
+            <button onclick="goToTab('tab-certificados')" class="px-8 py-3.5 rounded-full btn-campo text-xs font-bold inline-flex items-center gap-2 cursor-pointer shadow-md">
+              <span>Ver Certificaciones de Origen</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== PESTANA 4: CERTIFICACIONES DE ORIGEN ==================== -->
+    <div id="tab-certificados" class="tab-panel">
+      <section class="py-12 sm:py-16 bg-brand-marfil">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+            <span class="tag-origin">Garant&iacute;a de Pureza &amp; Sostenibilidad</span>
+            <h2 class="text-3xl sm:text-4xl font-brand-title font-bold text-brand-campoDarker">
+              Certificaciones Internacionales del Proveedor
+            </h2>
+            <p class="text-sm text-brand-muted">
+              El caf&eacute; de Sanchirio Palomar y el cacao nativo utilizados en XIEMBRA cuentan con el respaldo de los m&aacute;s altos est&aacute;ndares agr&iacute;colas internacionales.
+            </p>
+          </div>
+
+          <!-- Grid de Logos de Certificaciones -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            
+            <!-- 1. USDA Organic -->
+            <div class="p-6 rounded-3xl card-premium flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20 rounded-2xl bg-brand-marfil border border-brand-line flex items-center justify-center p-2 shadow-sm">
+                <svg viewBox="0 0 100 100" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="48" stroke="#006148" stroke-width="3" fill="#FAF8F5"/>
+                  <circle cx="50" cy="50" r="42" fill="#006148"/>
+                  <path d="M12 50 C 20 20, 80 20, 88 50 Z" fill="#FFFFFF"/>
+                  <text x="50" y="42" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#006148" text-anchor="middle">USDA</text>
+                  <text x="50" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">ORGANIC</text>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-brand-charcoal">USDA Organic</h3>
+              <p class="text-xs text-brand-muted">
+                Certificaci&oacute;n org&aacute;nica de Estados Unidos que garantiza cultivos sin pesticidas sint&eacute;ticos ni transg&eacute;nicos en Sanchirio Palomar.
+              </p>
+            </div>
+
+            <!-- 2. EU Organic (Euro-Leaf) -->
+            <div class="p-6 rounded-3xl card-premium flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20 rounded-2xl bg-brand-marfil border border-brand-line flex items-center justify-center p-2 shadow-sm">
+                <svg viewBox="0 0 100 65" class="w-16 h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="100" height="65" rx="10" fill="#2E7D32"/>
+                  <g fill="#FFFFFF">
+                    <circle cx="50" cy="14" r="2.5"/>
+                    <circle cx="38" cy="18" r="2.5"/>
+                    <circle cx="62" cy="18" r="2.5"/>
+                    <circle cx="30" cy="27" r="2.5"/>
+                    <circle cx="70" cy="27" r="2.5"/>
+                    <circle cx="28" cy="38" r="2.5"/>
+                    <circle cx="72" cy="38" r="2.5"/>
+                    <circle cx="34" cy="48" r="2.5"/>
+                    <circle cx="66" cy="48" r="2.5"/>
+                    <circle cx="44" cy="54" r="2.5"/>
+                    <circle cx="56" cy="54" r="2.5"/>
+                    <circle cx="50" cy="34" r="2.5"/>
+                  </g>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-brand-charcoal">EU Organic (AB)</h3>
+              <p class="text-xs text-brand-muted">
+                Est&aacute;ndar oficial de la Uni&oacute;n Europea para la producci&oacute;n ecol&oacute;gica y respeto integral de la biodiversidad del suelo.
+              </p>
+            </div>
+
+            <!-- 3. Fair Trade -->
+            <div class="p-6 rounded-3xl card-premium flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20 rounded-2xl bg-brand-marfil border border-brand-line flex items-center justify-center p-2 shadow-sm">
+                <svg viewBox="0 0 100 100" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="46" fill="#111C16"/>
+                  <path d="M50 8 C 73 8, 92 27, 92 50 C 92 68, 79 83, 62 89 C 55 83, 50 72, 50 60 C 50 42, 62 30, 62 30 C 52 30, 44 38, 44 48 C 44 58, 52 66, 52 75 C 52 82, 47 88, 40 90 C 21 86, 8 70, 8 50 C 8 27, 27 8, 50 8 Z" fill="#00A3E0"/>
+                  <path d="M8 50 C 8 73, 27 92, 50 92 C 55 92, 60 91, 65 89 C 58 83, 52 74, 52 64 C 52 50, 64 38, 64 38 C 54 38, 46 46, 46 56 C 46 64, 52 70, 52 78 C 30 82, 14 68, 14 50 Z" fill="#78BE20"/>
+                  <circle cx="50" cy="30" r="7" fill="#FFFFFF"/>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-brand-charcoal">Fair Trade (Comercio Justo)</h3>
+              <p class="text-xs text-brand-muted">
+                Garantiza precios justos por encima del mercado y condiciones laborales dignas para los caficultores de Jun&iacute;n.
+              </p>
+            </div>
+
+            <!-- 4. Rainforest Alliance -->
+            <div class="p-6 rounded-3xl card-premium flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20 rounded-2xl bg-brand-marfil border border-brand-line flex items-center justify-center p-2 shadow-sm">
+                <svg viewBox="0 0 100 100" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="48" fill="#006148"/>
+                  <circle cx="50" cy="50" r="38" fill="#FFFFFF"/>
+                  <path d="M50 25 C 40 25, 34 32, 34 40 C 34 48, 42 54, 42 62 C 42 68, 38 72, 36 75 C 44 76, 56 76, 64 75 C 62 72, 58 68, 58 62 C 58 54, 66 48, 66 40 C 66 32, 60 25, 50 25 Z" fill="#006148"/>
+                  <circle cx="43" cy="35" r="3.5" fill="#FFFFFF"/>
+                  <circle cx="57" cy="35" r="3.5" fill="#FFFFFF"/>
+                  <circle cx="43" cy="35" r="1.8" fill="#006148"/>
+                  <circle cx="57" cy="35" r="1.8" fill="#006148"/>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-brand-charcoal">Rainforest Alliance</h3>
+              <p class="text-xs text-brand-muted">
+                Certifica la protecci&oacute;n de fuentes h&iacute;dricas, fauna silvestre amaz&oacute;nica y cultivo bajo sombra en Sanchirio Palomar.
+              </p>
+            </div>
+
+            <!-- 5. BioEM Japon -->
+            <div class="p-6 rounded-3xl card-premium flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20 rounded-2xl bg-brand-marfil border border-brand-line flex items-center justify-center p-2 shadow-sm">
+                <svg viewBox="0 0 100 100" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="46" stroke="#004734" stroke-width="3" fill="#FFFCD2"/>
+                  <text x="50" y="44" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#006148" text-anchor="middle">BioEM</text>
+                  <text x="50" y="62" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#4D6257" text-anchor="middle">JAP&Oacute;N</text>
+                  <circle cx="50" cy="74" r="3" fill="#C5A059"/>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-brand-charcoal">BioEM (Jap&oacute;n)</h3>
+              <p class="text-xs text-brand-muted">
+                Tecnolog&iacute;a de microorganismos eficaces para la regeneraci&oacute;n biol&oacute;gica del suelo cafetalero.
+              </p>
+            </div>
+
+            <!-- 6. IMO Control Peru -->
+            <div class="p-6 rounded-3xl card-premium flex flex-col items-center text-center space-y-3">
+              <div class="w-20 h-20 rounded-2xl bg-brand-marfil border border-brand-line flex items-center justify-center p-2 shadow-sm">
+                <svg viewBox="0 0 100 100" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="46" stroke="#006148" stroke-width="2" fill="#FAF8F5"/>
+                  <path d="M25 50 C 35 30, 65 30, 75 50 C 65 70, 35 70, 25 50 Z" fill="#CBEC8A"/>
+                  <text x="50" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" fill="#004734" text-anchor="middle">IMO</text>
+                  <text x="50" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#006148" text-anchor="middle">CONTROL</text>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-brand-charcoal">IMO Control Latinoam&eacute;rica</h3>
+              <p class="text-xs text-brand-muted">
+                Auditor&iacute;a y certificaci&oacute;n de trazabilidad de origen en la planta de procesamiento (Registro N&deg; 25-11576PE).
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Legal Card & Info -->
+          <div class="p-6 rounded-2xl bg-brand-crema/60 border border-brand-campo/20 text-center text-xs text-brand-charcoal space-y-1">
+            <p><strong>Registro Sanitario Oficial:</strong> DIGESA G100441/N-KCEPAR &middot; <strong>RUC Productor:</strong> 20486021773</p>
+            <p class="text-brand-muted">Calidad cultivada con respeto en Sanchirio Palomar, procesada bajo est&aacute;ndares de exportaci&oacute;n y enviada a todo el Per&uacute;.</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== PESTANA 5: CANAL B2B & MAYORISTA ==================== -->
+    <div id="tab-b2b" class="tab-panel">
+      <section class="py-12 sm:py-16 bg-brand-campoDark text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div class="lg:col-span-6 space-y-5">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-nature/20 border border-brand-nature/40 text-brand-nature text-xs font-bold uppercase tracking-wider">
+                Ventas Corporativas &amp; Retail Nacional
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-brand-title font-bold text-brand-crema">
+                Lleva XIEMBRA a tu cafeter&iacute;a, biomarket o tienda gourmet en cualquier ciudad del Per&uacute;.
+              </h2>
+              <p class="text-xs sm:text-sm text-brand-nature/90 leading-relaxed font-light">
+                Un producto diferenciador que combina dos categor&iacute;as de alta afinidad: caf&eacute; de especialidad de Sanchirio Palomar y cacao nativo 65%. Dise&ntilde;ado para alta rotaci&oacute;n en counter de pago y cartas gourmet.
+              </p>
+
+              <div class="space-y-3 text-xs text-brand-crema/90">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-brand-nature shrink-0"></i>
+                  <span><strong>Condiciones Mayoristas Preferenciales:</strong> Descuentos escalonados por volumen y env&iacute;os consolidados a provincias.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-brand-nature shrink-0"></i>
+                  <span><strong>Listo para g&oacute;ndola:</strong> C&oacute;digo de barras EAN asignado, registro sanitario y marca registrada.</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="check-circle" class="w-4 h-4 text-brand-nature shrink-0"></i>
+                  <span><strong>Material de Degustaci&oacute;n y POP:</strong> Soporte para impulsar la prueba de producto en tu local.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario de Solicitud B2B -->
+            <div class="lg:col-span-6">
+              <div class="p-8 rounded-3xl bg-brand-campoDarker border-2 border-brand-nature/40 space-y-5 shadow-2xl">
+                <div class="border-b border-brand-nature/20 pb-3">
+                  <h3 class="text-xl font-brand-title font-bold text-brand-lemon">
+                    Solicitar Cat&aacute;logo y Lista de Precios B2B
+                  </h3>
+                  <p class="text-xs text-brand-crema/70 mt-1">
+                    Ingresa los datos de tu empresa para recibir la propuesta comercial mayorista.
+                  </p>
+                </div>
+
+                <form onsubmit="handleB2BSubmit(event)" class="space-y-4 text-xs">
+                  <div>
+                    <label class="block text-brand-crema font-bold mb-1">Nombre o Empresa / Cafeter&iacute;a</label>
+                    <input type="text" id="b2b-company" required placeholder="Ej. Cafeter&iacute;a Origen / Biomarket Verde" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-campo text-white placeholder-brand-crema/40 border border-brand-nature/30 focus:outline-none focus:border-brand-lemon text-xs">
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label class="block text-brand-crema font-bold mb-1">RUC (Opcional)</label>
+                      <input type="text" id="b2b-ruc" placeholder="Ej. 20601234567" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-campo text-white placeholder-brand-crema/40 border border-brand-nature/30 focus:outline-none focus:border-brand-lemon text-xs">
+                    </div>
+                    <div>
+                      <label class="block text-brand-crema font-bold mb-1">Ciudad / Regi&oacute;n</label>
+                      <input type="text" id="b2b-city" required placeholder="Ej. Lima / Arequipa / Cusco / Trujillo" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-campo text-white placeholder-brand-crema/40 border border-brand-nature/30 focus:outline-none focus:border-brand-lemon text-xs">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-brand-crema font-bold mb-1">Formato de Inter&eacute;s</label>
+                    <select id="b2b-format" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-campo text-white border border-brand-nature/30 focus:outline-none focus:border-brand-lemon text-xs">
+                      <option value="L&iacute;nea Completa (Grajeas 20g, 100g y Caf&eacute; Especialidad)">L&iacute;nea Completa (Grajeas 20g, 100g y Caf&eacute; Especialidad)</option>
+                      <option value="Bolsita 20g (Impulso / Counter)">Bolsita 20g (Impulso / Counter)</option>
+                      <option value="Caja 100g (Regalo / Exhibici&oacute;n)">Caja 100g (Regalo / Exhibici&oacute;n)</option>
+                      <option value="Caf&eacute; de Especialidad (100g)">Caf&eacute; de Especialidad (100g)</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="w-full py-3.5 rounded-full btn-nature text-xs font-extrabold flex items-center justify-center gap-2 cursor-pointer shadow-lg mt-2">
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                    <span>Solicitar Lista de Precios por WhatsApp</span>
+                  </button>
+                </form>
+
+                <div class="pt-3 border-t border-brand-nature/20 text-[11px] text-brand-crema/70 flex justify-between items-center">
+                  <span>Atenci&oacute;n Comercial Oficial:</span>
+                  <a href="https://wa.me/51981011816" target="_blank" class="text-brand-lemon underline font-bold">+51 981 011 816</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER & LEGAL ==================== -->
+  <footer class="bg-brand-campoDarker text-white pt-12 pb-8 text-xs border-t-4 border-brand-nature">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8">
+        
+        <div class="md:col-span-5 space-y-3">
+          <!-- Logo Compacto Oficial en Verde Nature para fondo oscuro -->
+          <img src="images/xiembra_logo_compacto_verde_nature.png" 
+               alt="XIEMBRA" 
+               class="h-12 w-auto filter drop-shadow" 
+               onerror="this.onerror=null; this.src='images/xiembra_logo_compacto_verde_campo.png'">
+          <p class="text-brand-nature/80 text-xs leading-relaxed max-w-sm">
+            Functional snacks y caf&eacute; de especialidad cultivados en el Parque Nacional del Caf&eacute;, Sanchirio Palomar (Chanchamayo, Jun&iacute;n). Conectando la selva peruana con el consumidor consciente en todo el pa&iacute;s.
+          </p>
+          <strong class="text-brand-nature block text-xs uppercase tracking-wider">Hecho con orgullo en el Per&uacute; &#127477;&#127466;</strong>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <strong class="block text-xs font-brand-title text-brand-nature uppercase tracking-wider mb-2">Secciones R&aacute;pidas</strong>
+          <ul class="space-y-1.5 text-brand-crema/80">
+            <li><button onclick="goToTab('tab-inicio')" class="hover:text-brand-nature cursor-pointer">Inicio &amp; Tienda Online</button></li>
+            <li><button onclick="goToTab('tab-beneficios')" class="hover:text-brand-nature cursor-pointer">Beneficios Funcionales</button></li>
+            <li><button onclick="goToTab('tab-origen')" class="hover:text-brand-nature cursor-pointer">Sanchirio Palomar &amp; Origen</button></li>
+            <li><button onclick="goToTab('tab-certificados')" class="hover:text-brand-nature cursor-pointer">Certificaciones</button></li>
+            <li><button onclick="goToTab('tab-b2b')" class="hover:text-brand-nature cursor-pointer">Canal B2B Mayorista</button></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-2">
+          <strong class="block text-xs font-brand-title text-brand-nature uppercase tracking-wider mb-2">Contacto Oficial</strong>
+          <ul class="space-y-2 text-brand-crema/80">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-lemon"></i>
+              <a href="https://wa.me/51981011816" target="_blank" class="hover:text-brand-lemon font-bold text-sm text-brand-lemon">+51 981 011 816</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-nature"></i>
+              <a href="mailto:xiembra.peru@gmail.com" class="hover:text-brand-nature">xiembra.peru@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="instagram" class="w-4 h-4 text-brand-lemon"></i>
+              <a href="https://instagram.com/xiembra" target="_blank" class="hover:text-brand-lemon underline font-bold">@xiembra en Instagram</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-brand-nature/20 flex flex-col sm:flex-row justify-between items-center gap-2 text-brand-crema/60 text-[10px]">
+        <p>Xiembra Agroindustrial S.A.C. &middot; RUC 20616165365 &middot; Lima y Provincias, Per&uacute;</p>
+        <p>&copy; 2026 XIEMBRA. Todos los derechos reservados.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <aside class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    <div class="hidden sm:flex items-center px-4 py-2 rounded-full bg-brand-campoDarker text-white text-xs border border-brand-nature/40 shadow-2xl backdrop-blur-md">
+      <span class="w-2.5 h-2.5 rounded-full bg-brand-nature mr-2 animate-ping"></span>
+      <span class="font-bold text-brand-crema">&iquest;Hacer pedido? WhatsApp directo</span>
+    </div>
+    <a href="https://wa.me/51981011816?text=%C2%A1Hola%20XIEMBRA!%20Deseo%20hacer%20un%20pedido%20de%20Grajeas%20de%20Cacao%20con%20Caf%C3%A9%20con%20env%C3%ADo%20nacional." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Abrir WhatsApp"
+       class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+      <i data-lucide="message-circle" class="w-7 h-7 fill-current"></i>
+    </a>
+  </aside>
+
+  <!-- ==================== JAVASCRIPT: TAB NAVIGATION & CHECKOUT ==================== -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Tab Navigation Logic with Smooth Animated Transitions
+    function goToTab(tabId) {
+      const allTabs = ['tab-inicio', 'tab-beneficios', 'tab-origen', 'tab-certificados', 'tab-b2b'];
+      
+      allTabs.forEach(id => {
+        const panel = document.getElementById(id);
+        const navBtn = document.getElementById('nav-' + id);
+        
+        if (panel) {
+          if (id === tabId) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        }
+        
+        if (navBtn) {
+          if (id === tabId) {
+            navBtn.classList.add('active');
+          } else {
+            navBtn.classList.remove('active');
+          }
+        }
+      });
+
+      // Update URL hash without jumping
+      if (history.pushState) {
+        history.pushState(null, null, '#' + tabId.replace('tab-', ''));
+      }
+
+      // Smooth scroll to top of main content
+      const main = document.getElementById('main-content');
+      if (main) {
+        window.scrollTo({
+          top: main.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // Toggle Mobile Drawer
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Scroll directly to products section in homepage
+    function scrollToProducts() {
+      goToTab('tab-inicio');
+      setTimeout(() => {
+        const el = document.getElementById('seccion-productos');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 200);
+    }
+
+    // Direct product selector from cards
+    function selectProductAndScroll(type) {
+      goToTab('tab-inicio');
+      if (type === 'snack20') {
+        document.getElementById('check-snack20').checked = true;
+      } else if (type === 'snack100') {
+        document.getElementById('check-snack100').checked = true;
+      } else if (type === 'coffee100') {
+        document.getElementById('check-coffee100').checked = true;
+      }
+      updatePreorderSummary();
+      setTimeout(() => {
+        const box = document.getElementById('checkout-box');
+        if (box) {
+          box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 200);
+    }
+
+    // Quantities and Subtotal Calculation
+    function adjustQty(id, delta) {
+      const input = document.getElementById(id);
+      if (input) {
+        let val = parseInt(input.value) || 1;
+        val = Math.max(1, Math.min(50, val + delta));
+        input.value = val;
+        updatePreorderSummary();
+      }
+    }
+
+    function updatePreorderSummary() {
+      const checkSnack20 = document.getElementById('check-snack20').checked;
+      const qtySnack20 = parseInt(document.getElementById('qty-snack20').value) || 1;
+
+      const checkSnack100 = document.getElementById('check-snack100').checked;
+      const qtySnack100 = parseInt(document.getElementById('qty-snack100').value) || 1;
+
+      const checkCoffee100 = document.getElementById('check-coffee100').checked;
+      const qtyCoffee100 = parseInt(document.getElementById('qty-coffee100').value) || 1;
+
+      let items = [];
+      let total = 0;
+
+      if (checkSnack20) {
+        items.push(`${qtySnack20}x Bolsita 20g`);
+        total += (qtySnack20 * 6.90);
+      }
+      if (checkSnack100) {
+        items.push(`${qtySnack100}x Caja 100g`);
+        total += (qtySnack100 * 24.00);
+      }
+      if (checkCoffee100) {
+        items.push(`${qtyCoffee100}x Caf\u00E9 Especialidad 100g`);
+        total += (qtyCoffee100 * 28.00);
+      }
+
+      const summaryText = document.getElementById('preorder-summary-text');
+      const summaryTotal = document.getElementById('preorder-summary-total');
+
+      if (items.length === 0) {
+        summaryText.innerText = 'Selecciona al menos un producto';
+        summaryTotal.innerText = 'S/ 0.00';
+      } else {
+        summaryText.innerText = items.join(' + ');
+        summaryTotal.innerText = `S/ ${total.toFixed(2)}`;
+      }
+    }
+
+    // Preorder WhatsApp Submit (Nacional)
+    function handlePreorderSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('preorder-name').value;
+      const district = document.getElementById('preorder-district').value;
+
+      const summaryText = document.getElementById('preorder-summary-text').innerText;
+      const summaryTotal = document.getElementById('preorder-summary-total').innerText;
+
+      const msg = `\u00A1Hola XIEMBRA! Deseo iniciar mi pedido con env\u00EDo nacional:\n\u2022 Formatos: ${summaryText}\n\u2022 Subtotal Estimado: ${summaryTotal}\n\u2022 Nombre: ${name}\n\u2022 Destino/Ciudad: ${district}\n\u00BFQuedamos atentos a coordinar el env\u00EDo?`;
+
+      window.open(`https://wa.me/51981011816?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // B2B Wholesale Request Submit (WhatsApp)
+    function handleB2BSubmit(e) {
+      e.preventDefault();
+      const company = document.getElementById('b2b-company').value;
+      const ruc = document.getElementById('b2b-ruc').value || 'No especificado';
+      const city = document.getElementById('b2b-city').value;
+      const format = document.getElementById('b2b-format').value;
+
+      const msg = `\u00A1Hola XIEMBRA! Deseo solicitar el cat\u00E1logo y lista de precios mayoristas B2B:\n\u2022 Empresa/Local: ${company}\n\u2022 RUC: ${ruc}\n\u2022 Ciudad/Regi\u00F3n: ${city}\n\u2022 Formato de Inter\u00E9s: ${format}\nQuedo atento a la informaci\u00F3n comercial.`;
+
+      window.open(`https://wa.me/51981011816?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    // Handle initial URL hash on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'catalogo') {
+        scrollToProducts();
+      } else if (hash && ['inicio', 'beneficios', 'origen', 'certificados', 'b2b'].includes(hash)) {
+        goToTab('tab-' + hash);
+      }
+    });
+
+    updatePreorderSummary();
+  </script>
+
+</body>
+</html>

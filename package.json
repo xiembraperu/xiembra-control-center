@@ -1,0 +1,16 @@
+{
+  "name": "xiembra",
+  "version": "1.0.0",
+  "description": "> **Plataforma Web Oficial & Repositorio de Recursos Corporativos**   > *Functional Snacks* de Cacao Nativo 65% y Café de Especialidad de Altura   > Origen: **Parque Nacional del Café en Sanchirio Palomar**, Valle de Chanchamayo (Junín, Perú)   > Atención Comercial Oficial: **`+51 981 011 816`** | **`xiembra.peru@gmail.com`**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "docx": "^9.7.1",
+    "exceljs": "^4.4.0"
+  }
+}
